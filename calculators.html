@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ক্যালকুলেটর — BioVermi</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="overlay" id="overlay"></div>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><span class="brand-icon">🌱</span><span class="brand-text">BioVermi<small>Bangladesh</small></span></div>
+  <nav>
+    <div class="nav-section"><div class="nav-section-title">প্রধান</div><a href="index.html">🏠 হোম</a><a href="dashboard.html">📊 ড্যাশবোর্ড</a><a href="calculators.html" class="active">🧮 ক্যালকুলেটর</a></div>
+    <div class="nav-section"><div class="nav-section-title">শিক্ষা</div><a href="biogas.html">🔥 বায়োগ্যাস</a><a href="vermicompost.html">🪱 ভার্মিকম্পোস্ট</a><a href="integrated-farm.html">♻️ ইন্টিগ্রেটেড</a></div>
+    <div class="nav-section"><div class="nav-section-title">ব্যবসা</div><a href="business.html">💼 বিজনেস</a></div>
+    <div class="nav-section"><div class="nav-section-title">রেফারেন্স</div><a href="glossary.html">📖 গ্লসারি</a><a href="references.html">🔗 রেফারেন্স</a><a href="learning.html">🎓 রোডম্যাপ</a></div>
+  </nav>
+</aside>
+<div class="main">
+<div class="topbar"><button class="hamburger" id="hamburger">☰</button>
+<div class="search-box"><input type="text" id="siteSearch" placeholder="ক্যালকুলেটর সার্চ..."></div>
+<div class="topbar-actions"><button class="icon-btn" id="themeToggle">🌓</button></div></div>
+<div class="content">
+<div class="page-header"><h1>🧮 ইন্টারেক্টিভ ক্যালকুলেটর</h1>
+<p>সব হিসাব আনুমানিক (Estimated)। Important: Formula, limitation এবং example সহ প্রতিটি ক্যালকুলেটর।</p></div>
+
+<div class="grid grid-2">
+<div class="card" id="cowdung">
+<h3>🐄 গোবর প্রস্তুতি ক্যালকুলেটর</h3>
+<div class="form-group"><label>দৈনিক গোবর (কেজি)</label><input type="number" id="cdDung" step="any" value="100"></div>
+<div class="form-group"><label>গোবরের Moisture (%)</label><input type="number" id="cdMoist" value="80"></div>
+<div class="form-group"><label>Target Total Solids (%)</label><input type="number" id="cdTarget" value="10"></div>
+<button class="btn btn-primary" id="cdCalc">হিসাব করুন</button>
+<div class="calc-result" id="cdResult"></div>
+<p style="font-size:.82rem;margin-top:8px">Formula: TS = গোবর×(1−M%); Slurry = TS÷Target; পানি = Slurry−গোবর</p>
+</div>
+
+<div class="card" id="biogassize">
+<h3>🏗️ Biogas Plant Sizing</h3>
+<div class="form-group"><label>দৈনিক গোবর (কেজি)</label><input type="number" id="bgDung" value="100"></div>
+<div class="form-group"><label>HRT (দিন)</label><input type="number" id="bgHRT" value="40"></div>
+<div class="form-group"><label>Feedstock TS (%)</label><input type="number" id="bgTS" value="10"></div>
+<div class="form-group"><label>Biogas Yield (m³/kg dung)</label><input type="number" id="bgYield" step="0.001" value="0.04"></div>
+<button class="btn btn-primary" id="bgCalc">হিসাব করুন</button>
+<div class="calc-result" id="bgResult"></div>
+<p style="font-size:.82rem;margin-top:8px">⚠️ Yield মান feedstock, temperature, digester-নির্ভর। Engineer-এর পরামর্শ নিন।</p>
+</div>
+
+<div class="card" id="worm">
+<h3>🪱 Worm Population</h3>
+<div class="form-group"><label>প্রাথমিক সংখ্যা</label><input type="number" id="wpInit" value="1000"></div>
+<div class="form-group"><label>দিন</label><input type="number" id="wpDays" value="60"></div>
+<div class="form-group"><label>দৈনিক বৃদ্ধির হার (%)</label><input type="number" id="wpRate" step="0.01" value="1.5"></div>
+<button class="btn btn-primary" id="wpCalc">হিসাব করুন</button>
+<div class="calc-result" id="wpResult"></div>
+<p style="font-size:.82rem">N = N₀×(1+r)^t। বাস্তব হার প্রজাতি ও অবস্থা-নির্ভর।</p>
+</div>
+
+<div class="card" id="feed">
+<h3>🍽️ Feeding Calculator</h3>
+<div class="form-group"><label>কেঁচো Biomass (কেজি)</label><input type="number" id="feedBio" step="any" value="5"></div>
+<div class="form-group"><label>Feed Rate (% of biomass)</label><input type="number" id="feedRate" value="50"></div>
+<div class="form-group"><label>অবশিষ্ট (uneaten) feed (কেজি)</label><input type="number" id="feedUneaten" step="any" value="0"></div>
+<button class="btn btn-primary" id="feedCalc">হিসাব করুন</button>
+<div class="calc-result" id="feedResult"></div>
+<p style="font-size:.82rem">Trial suggestion মাত্র। কেঁচোর সক্রিয়তা দেখে সমন্বয় করুন।</p>
+</div>
+
+<div class="card" id="bed">
+<h3>🛏️ Bed Design (Approx)</h3>
+<div class="form-group"><label>Target Worm Count</label><input type="number" id="bedWorm" value="5000"></div>
+<div class="form-group"><label>প্রতি কেঁচোতে জায়গা (cm²)</label><input type="number" id="bedSpace" value="4"></div>
+<button class="btn btn-primary" onclick="(()=>{
+  const w=+document.getElementById('bedWorm').value||0;
+  const s=+document.getElementById('bedSpace').value||4;
+  const area=w*s/10000;
+  document.getElementById('bedResult').innerHTML=`<h4>আনুমানিক এলাকা</h4><div class=\"res-line\"><span>প্রয়োজন</span><b>${area.toFixed(2)} m²</b></div><small>উদাহরণ: ${Math.sqrt(area).toFixed(1)} × ${Math.sqrt(area).toFixed(1)} m</small>`;
+})()">হিসাব করুন</button>
+<div class="calc-result" id="bedResult"></div>
+<p style="font-size:.82rem">প্রজাতি ও bedding-নির্ভর। Field trial করে সমন্বয় করুন।</p>
+</div>
+
+<div class="card" id="biz">
+<h3>💼 Biogas Business Calculator</h3>
+<div class="form-row">
+<div class="form-group"><label>CAPEX (৳)</label><input type="number" id="bCost" value="150000"></div>
+<div class="form-group"><label>Daily Gas (m³)</label><input type="number" id="bGas" step="any" value="5"></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label>Gas Price (৳/m³)</label><input type="number" id="bGasPrice" step="any" value="30"></div>
+<div class="form-group"><label>Daily Digestate Sales (৳)</label><input type="number" id="bDig" value="50"></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label>Operating Days/Month</label><input type="number" id="bDays" value="30"></div>
+<div class="form-group"><label>Monthly OPEX (৳)</label><input type="number" id="bOpex" value="5000"></div>
+</div>
+<button class="btn btn-primary" id="bizCalc">হিসাব করুন</button>
+<div class="calc-result" id="bizResult"></div>
+<p style="font-size:.82rem">সব দাম আপনার ইনপুট। বাজারদর যাচাই করে ব্যবহার করুন।</p>
+</div>
+
+<div class="card" id="energy">
+<h3>⚡ Energy Conversion</h3>
+<div class="form-group"><label>Gas Volume (m³/day)</label><input type="number" id="enGas" value="5"></div>
+<div class="form-group"><label>Methane % (approx)</label><input type="number" id="enCH4" value="60"></div>
+<div class="form-group"><label>Generator Efficiency (%)</label><input type="number" id="enEff" value="35"></div>
+<button class="btn btn-primary" onclick="(()=>{
+  const g=+document.getElementById('enGas').value||0;
+  const ch4=+document.getElementById('enCH4').value||0;
+  const eff=+document.getElementById('enEff').value||0;
+  const energy=g*(ch4/100)*35.8; // MJ/m3 of pure CH4 approx
+  const kWh=energy*eff/100/3.6;
+  document.getElementById('enResult').innerHTML=`
+    <h4>ফলাফল <span class=\"badge badge-est\">Estimated</span></h4>
+    <div class=\"res-line\"><span>Energy Content</span><b>${energy.toFixed(1)} MJ/day</b></div>
+    <div class=\"res-line\"><span>Electricity (approx)</span><b>${kWh.toFixed(2)} kWh/day</b></div>
+    <div class=\"formula\">E = Gas × CH₄% × 35.8 MJ/m³<br>kWh = E × eff / 3.6</div>
+    <small>সত্যিকার মান gas analyzer measurement-এর ওপর নির্ভর করে।</small>`;
+})()">হিসাব করুন</button>
+<div class="calc-result" id="enResult"></div>
+</div>
+
+<div class="card" id="integrated">
+<h3>♻️ Integrated Farm Calculator</h3>
+<p>বায়োগ্যাস + ভার্মিকম্পোস্ট একসাথে হিসাব করতে নিচের ঘরগুলো পূরণ করুন।</p>
+<div class="form-row">
+<div class="form-group"><label>Biogas CAPEX (৳)</label><input type="number" id="iBCapex" value="150000"></div>
+<div class="form-group"><label>Vermi CAPEX (৳)</label><input type="number" id="iVCapex" value="50000"></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label>Monthly Biogas Revenue (৳)</label><input type="number" id="iBRev" value="8000"></div>
+<div class="form-group"><label>Monthly Vermi Revenue (৳)</label><input type="number" id="iVRev" value="12000"></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label>Monthly OPEX (৳)</label><input type="number" id="iOpex" value="6000"></div>
+<div class="form-group"><label>Months for Projection</label><input type="number" id="iMonths" value="12"></div>
+</div>
+<button class="btn btn-primary" onclick="(()=>{
+  const capex=(+document.getElementById('iBCapex').value||0)+(+document.getElementById('iVCapex').value||0);
+  const rev=(+document.getElementById('iBRev').value||0)+(+document.getElementById('iVRev').value||0);
+  const opex=+document.getElementById('iOpex').value||0;
+  const months=+document.getElementById('iMonths').value||12;
+  const net=rev-opex;
+  const total=net*months;
+  const payback=net>0?capex/net:0;
+  const roi=net>0?(net*12)/capex*100:0;
+  document.getElementById('iResult').innerHTML=`
+    <h4>Projection (${months} মাস)</h4>
+    <div class=\"res-line\"><span>Total CAPEX</span><b>৳ ${capex.toFixed(0)}</b></div>
+    <div class=\"res-line\"><span>মাসিক Net</span><b>৳ ${net.toFixed(0)}</b></div>
+    <div class=\"res-line\"><span>${months} মাসে Net</span><b>৳ ${total.toFixed(0)}</b></div>
+    <div class=\"res-line\"><span>Payback (মাস)</span><b>${payback>0?payback.toFixed(1):'—'}</b></div>
+    <div class=\"res-line\"><span>Annual ROI %</span><b>${roi.toFixed(1)}%</b></div>
+    <div class=\"formula\">Net = Revenue − OPEX<br>Payback = CAPEX / Net<br>ROI = Net ×12 / CAPEX ×100</div>
+    <small>সব ইনপুট ব্যবহারকারী-প্রদত্ত। কোনো নিশ্চিত লাভের প্রতিশ্রুতি নয়।</small>`;
+})()">হিসাব করুন</button>
+<div class="calc-result" id="iResult"></div>
+</div>
+</div>
+
+<div class="footer">© BioVermi Bangladesh</div>
+</div></div></div>
+<script src="script.js"></script>
+</body></html>
