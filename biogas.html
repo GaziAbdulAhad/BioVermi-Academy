@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>বায়োগ্যাস মডিউল — BioVermi</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="overlay" id="overlay"></div>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><span class="brand-icon">🌱</span><span class="brand-text">BioVermi<small>Bangladesh</small></span></div>
+  <nav>
+    <div class="nav-section"><div class="nav-section-title">প্রধান</div>
+      <a href="index.html">🏠 হোম</a><a href="dashboard.html">📊 ড্যাশবোর্ড</a><a href="calculators.html">🧮 ক্যালকুলেটর</a></div>
+    <div class="nav-section"><div class="nav-section-title">শিক্ষা</div>
+      <a href="biogas.html" class="active">🔥 বায়োগ্যাস</a><a href="vermicompost.html">🪱 ভার্মিকম্পোস্ট</a><a href="integrated-farm.html">♻️ ইন্টিগ্রেটেড</a></div>
+    <div class="nav-section"><div class="nav-section-title">ব্যবসা</div><a href="business.html">💼 বিজনেস</a></div>
+    <div class="nav-section"><div class="nav-section-title">রেফারেন্স</div>
+      <a href="glossary.html">📖 গ্লসারি</a><a href="references.html">🔗 রেফারেন্স</a><a href="learning.html">🎓 রোডম্যাপ</a></div>
+  </nav>
+</aside>
+<div class="main">
+<div class="topbar"><button class="hamburger" id="hamburger">☰</button>
+<div class="search-box"><input type="text" id="siteSearch" placeholder="মডিউল সার্চ..."></div>
+<div class="topbar-actions"><button class="icon-btn" id="themeToggle">🌓</button></div></div>
+<div class="content">
+<div class="page-header"><h1>🔥 বায়োগ্যাস — সম্পূর্ণ শিক্ষা মডিউল (০১–১৬)</h1>
+<p>শূন্য থেকে শুরু করে বায়োগ্যাস প্ল্যান্ট স্থাপন, অপারেশন, মনিটরিং, ল্যাব টেস্টিং, ট্রাবলশুটিং এবং বিজনেস প্ল্যানিং পর্যন্ত সবকিছু।</p></div>
+
+<div class="alert alert-info">💡 প্রতিটি মডিউলে ক্লিক করে বিস্তারিত দেখুন। প্রতিটি উপবিষয় আলাদাভাবে ব্যাখ্যা করা হয়েছে। Technical term প্রথমবার ব্যবহারের সময় বাংলা অর্থ দেওয়া হয়েছে।</div>
+
+<!-- ============================================================ -->
+<!-- MODULE 01 -->
+<div class="module open"><div class="module-header"><span><span class="mod-num">০১</span> বায়োগ্যাসের মৌলিক ধারণা (Biogas Fundamentals)</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>বায়োগ্যাস কী?</h4>
+<p>বায়োগ্যাস হলো জৈব পদার্থের অক্সিজেন-বিহীন (Anaerobic) পচন প্রক্রিয়ায় উৎপন্ন দাহ্য গ্যাসের মিশ্রণ। মূলত মিথেন (CH₄) ও কার্বন ডাই-অক্সাইড (CO₂) এর মিশ্রণ, সাথে সামান্য হাইড্রোজেন সালফাইড (H₂S), জলীয় বাষ্প, অ্যামোনিয়া ইত্যাদি।</p>
+
+<h4>Anaerobic Digestion কী?</h4>
+<p>Anaerobic Digestion (অবায়বীয় হজম) হলো এমন একটি জৈব-রাসায়নিক প্রক্রিয়া যেখানে অক্সিজেনের অনুপস্থিতিতে অণুজীব জৈব পদার্থ ভেঙে গ্যাস উৎপন্ন করে। এই প্রক্রিয়ায় চারটি ধাপ থাকে — Hydrolysis → Acidogenesis → Acetogenesis → Methanogenesis।</p>
+
+<h4>Aerobic বনাম Anaerobic পার্থক্য</h4>
+<div class="table-wrap"><table>
+<thead><tr><th>বিষয়</th><th>Aerobic</th><th>Anaerobic</th></tr></thead>
+<tbody>
+<tr><td>অক্সিজেন</td><td>প্রয়োজন</td><td>প্রয়োজন নেই</td></tr>
+<tr><td>শেষ পণ্য</td><td>CO₂ + H₂O + তাপ</td><td>CH₄ + CO₂ + জৈব সার</td></tr>
+<tr><td>গন্ধ</td><td>সাধারণত কম</td><td>H₂S-এর কারণে তীব্র</td></tr>
+<tr><td>গতি</td><td>দ্রুত</td><td>ধীর</td></tr>
+<tr><td>তাপমাত্রা</td><td>উচ্চ (55–65°C)</td><td>মধ্যম (30–40°C)</td></tr>
+<tr><td>ব্যবহার</td><td>কম্পোস্টিং</td><td>বায়োগ্যাস</td></tr>
+</tbody></table></div>
+
+<h4>অণুজীবের ভূমিকা</h4>
+<p>বিভিন্ন শ্রেণির ব্যাকটেরিয়া ধাপে ধাপে কাজ করে। Hydrolysis-এ Fermentative bacteria, Acidogenesis-এ Acidogenic bacteria, Acetogenesis-এ Acetogenic bacteria এবং Methanogenesis-এ Methanogens (প্রাচীন ব্যাকটেরিয়া — Archaea) কাজ করে। Methanogens অক্সিজেনের প্রতি অত্যন্ত সংবেদনশীল।</p>
+
+<h4>বায়োগ্যাসের সাধারণ গঠন (সাধারণ অনুমান)</h4>
+<div class="table-wrap"><table>
+<thead><tr><th>উপাদান</th><th>আনুমানিক %</th><th>বৈশিষ্ট্য</th></tr></thead>
+<tbody>
+<tr><td>মিথেন (CH₄)</td><td>50–75%</td><td>দাহ্য, শক্তি উৎস</td></tr>
+<tr><td>কার্বন ডাই-অক্সাইড (CO₂)</td><td>25–50%</td><td>অদাহ্য</td></tr>
+<tr><td>হাইড্রোজেন সালফাইড (H₂S)</td><td>0.005–2%</td><td>বিষাক্ত, দুর্গন্ধ, ক্ষয়কারী</td></tr>
+<tr><td>জলীয় বাষ্প</td><td>1–5%</td><td>পাইপে কনডেনসেট তৈরি</td></tr>
+<tr><td>অ্যামোনিয়া (NH₃)</td><td>সামান্য</td><td>ক্ষয়কারী</td></tr>
+<tr><td>হাইড্রোজেন (H₂)</td><td>সামান্য</td><td>—</td></tr>
+</tbody></table></div>
+<p><small>⚠️ উপরের শতকরা মান feedstock, ডিজাইন ও অপারেশনভেদে পরিবর্তিত হয়। এটি সাধারণ পরিসর মাত্র।</small></p>
+
+<h4>মিথেন কেন জ্বলে?</h4>
+<p>মিথেন (CH₄) অক্সিজেনের সাথে বিক্রিয়া করে CO₂ ও H₂O এবং শক্তি তৈরি করে: <b>CH₄ + 2O₂ → CO₂ + 2H₂O + তাপ</b>। এই তাপই রান্না বা বিদ্যুৎ উৎপাদনে ব্যবহৃত হয়।</p>
+
+<h4>Heating Value (তাপীয় মান)</h4>
+<p>শুদ্ধ মিথেনের Heating Value প্রায় ৩৫.৮ MJ/m³ (উচ্চতর) বা ৩২.০ MJ/m³ (নিম্নতর)। বায়োগ্যাসে CO₂ থাকায় বাস্তব মান সাধারণত ২০–২৮ MJ/m³ পরিসরে থাকে। ব্যবহারকারীকে অবশ্যই গ্যাস কম্পোজিশন দিয়ে তাপীয় মান যাচাই করতে হবে।</p>
+
+<h4>Natural Gas বনাম Biogas</h4>
+<div class="table-wrap"><table>
+<thead><tr><th>বৈশিষ্ট্য</th><th>Natural Gas</th><th>Biogas</th></tr></thead>
+<tbody>
+<tr><td>মিথেন %</td><td>~৯০–৯৫%</td><td>~৫০–৭৫%</td></tr>
+<tr><td>H₂S</td><td>খুব কম</td><td>সামান্য থেকে মধ্যম</td></tr>
+<tr><td>উৎস</td><td>ভূগর্ভস্থ</td><td>জৈব বর্জ্য</td></tr>
+<tr><td>Heating value</td><td>উচ্চতর</td><td>নিম্নতর</td></tr>
+<tr><td>পরিবেশগত প্রভাব</td><td>জীবাশ্ম</td><td>নবায়নযোগ্য</td></tr>
+</tbody></table></div>
+
+<h4>LPG বনাম Biogas</h4>
+<p>LPG (তরল পেট্রোলিয়াম গ্যাস) মূলত প্রোপেন+বিউটেন, চাপে তরল অবস্থায় রাখা হয়, Heating value অনেক বেশি। বায়োগ্যাস সাধারণত নিম্নচাপে গ্যাসীয় অবস্থায় থাকে এবং প্রতি m³-এ কম শক্তি দেয়। তাই একই কাজে বেশি বায়োগ্যাস ভলিউম প্রয়োজন হয়।</p>
+
+<h4>বায়োগ্যাসের ব্যবহার</h4>
+<ul>
+<li>রান্না (stove)</li>
+<li>পানি গরম করা</li>
+<li>বিদ্যুৎ উৎপাদন (generator)</li>
+<li>Combined Heat & Power (CHP)</li>
+<li>বয়লার ও ছোট শিল্প</li>
+<li>Biomethane-এ আপগ্রেড (গাড়ির জ্বালানি)</li>
+</ul>
+
+<h4>সুবিধা ও সীমাবদ্ধতা</h4>
+<p><b>সুবিধা:</b> নবায়নযোগ্য, বর্জ্য থেকে শক্তি, জৈব সার উপপণ্য, গ্রিনহাউস গ্যাস হ্রাস, জ্বালানি সাশ্রয়, গ্রামীণ কর্মসংস্থান।</p>
+<p><b>সীমাবদ্ধতা:</b> প্রাথমিক বিনিয়োগ, তাপমাত্রা সংবেদনশীল, দক্ষ অপারেশন প্রয়োজন, H₂S ক্ষয়, সীমিত গ্যাস স্টোরেজ, feedstock-এর নিয়মিত সরবরাহ দরকার।</p>
+
+<h4>পরিবেশগত প্রভাব</h4>
+<p>মিথেন একটি শক্তিশালী গ্রিনহাউস গ্যাস (CO₂-এর তুলনায় ~২৫–২৮ গুণ)। জৈব বর্জ্য খোলা অবস্থায় পচলে মিথেন বায়ুমণ্ডলে যায়। বায়োগ্যাস প্ল্যান্টে এটি ধরা পড়ে জ্বালানি হিসেবে ব্যবহৃত হয় — ফলে মিথেন নিঃসরণ কমে। Digestate জৈব সার হিসেবে রাসায়নিক সারের চাহিদা কমায়।</p>
+
+<h4>Renewable Energy হিসেবে গুরুত্ব</h4>
+<p>বাংলাদেশে গবাদিপশু ও কৃষি বর্জ্য প্রচুর। সঠিক ব্যবস্থাপনায় বায়োগ্যাস গ্রামীণ পরিবারের জ্বালানি সংকট, বন উজাড়, রাসায়নিক সারের ওপর নির্ভরতা এবং মাটি ক্ষয় কমাতে সহায়ক। এটি একটি decentralised, নবায়নযোগ্য শক্তি উৎস।</p>
+</div></div>
+
+<!-- MODULE 02 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">০২</span> কাঁচামাল ও Feedstock ব্যবস্থাপনা</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>Feedstock (কাঁচামাল) কী?</h4>
+<p>বায়োগ্যাস ডাইজেস্টারে যে জৈব পদার্থ দেয়া হয় তাকে feedstock বলে। সঠিক feedstock নির্বাচন ও মিশ্রণ গ্যাস উৎপাদনের মূল চাবিকাঠি।</p>
+
+<h4>প্রধান Feedstock তালিকা</h4>
+<div class="table-wrap"><table>
+<thead><tr><th>Feedstock</th><th>সংগ্রহ</th><th>প্রস্তুতি</th><th>সতর্কতা</th></tr></thead>
+<tbody>
+<tr><td>গরুর গোবর</td><td>গোশালা থেকে দৈনিক</td><td>ময়লা বাদ, পানি মিশ্রণ</td><td>খড়/বালি থাকলে ছেঁকে নিন</td></tr>
+<tr><td>মহিষের গোবর</td><td>দৈনিক</td><td>একই</td><td>আঁশ বেশি, পানি বেশি লাগে</td></tr>
+<tr><td>মুরগির বর্জ্য</td><td>পোল্ট্রি ফার্ম</td><td>পাতলা করে মিশ্রণ</td><td>অ্যামোনিয়া বেশি, প্রি-ট্রিটমেন্ট</td></tr>
+<tr><td>ছাগলের গোবর</td><td>দৈনিক</td><td>মিশ্রণ</td><td>শুকনো হলে পানি</td></tr>
+<tr><td>শূকরের বর্জ্য</td><td>ফার্ম</td><td>পাতলা</td><td>প্যাথোজেন ঝুঁকি</td></tr>
+<tr><td>রান্নাঘরের বর্জ্য</td><td>বাসা/রেস্টুরেন্ট</td><td>প্লাস্টিক বাদ</td><td>তেল, মাংস, লবণ এড়ান</td></tr>
+<tr><td>সবজি বর্জ্য</td><td>বাজার</td><td>কুচি</td><td>পচা হলে গন্ধ</td></tr>
+<tr><td>ফলের বর্জ্য</td><td>বাজার</td><td>কুচি</td><td>অ্যাসিডিক হতে পারে</td></tr>
+<tr><td>কৃষি বর্জ্য</td><td>মাঠ</td><td>কুচি</td><td>C:N বেশি, ধীর পচন</td></tr>
+<tr><td>খাদ্য প্রসেসিং বর্জ্য</td><td>কারখানা</td><td>পরীক্ষা করে</td><td>দূষণ ঝুঁকি</td></tr>
+</tbody></table></div>
+
+<h4>প্রতিটি Feedstock-এর গুরুত্বপূর্ণ Parameter</h4>
+<ul>
+<li><b>Moisture Content (আর্দ্রতা):</b> কাঁচামালে পানির পরিমাণ। বেশি হলে digester-এ পানি বাড়ে।</li>
+<li><b>Total Solids (TS):</b> শুকনো পদার্থের শতকরা হার।</li>
+<li><b>Volatile Solids (VS):</b> জৈব পদার্থের অংশ, যা গ্যাসে রূপান্তরিত হয়।</li>
+<li><b>C:N Ratio (Carbon:Nitrogen):</b> আদর্শ সাধারণত ২০:১–৩০:১ (নির্দিষ্ট নয়, feedstock-নির্ভর)।</li>
+<li><b>Biogas Yield:</b> প্রতি কেজি VS থেকে প্রাপ্ত গ্যাস (feedstock-নির্ভর)।</li>
+</ul>
+
+<h4>একক বনাম মিশ্রণ</h4>
+<p>একক feedstock দিলে প্রক্রিয়া সরল কিন্তু পুষ্টি ভারসাম্যহীন হতে পারে। মিশ্রণ (co-digestion) করলে C:N, অণুজীব বৈচিত্র্য, গ্যাস ইল্ড উন্নত হয়। তবে অতিরিক্ত বৈচিত্র্য ব্যবস্থাপনা জটিল করে।</p>
+
+<h4>যেসব উপাদানে সমস্যা হতে পারে</h4>
+<ul>
+<li>অতিরিক্ত লবণাক্ত বা অ্যাসিডিক বর্জ্য</li>
+<li>কীটনাশক/রাসায়নিক মিশ্রিত বর্জ্য</li>
+<li>প্লাস্টিক, কাচ, ধাতু, বালি</li>
+<li>অতিরিক্ত তেল/গ্রিজ (মাংসের বর্জ্য)</li>
+<li>অজানা শিল্প বর্জ্য</li>
+</ul>
+<p><small>⚠️ কোনো feedstock-এর উৎপাদন হার অনুমান করে বাস্তব তথ্য হিসেবে উপস্থাপন করা যাবে না। স্থানীয় পরীক্ষা বা বিশ্বস্ত গবেষণা থেকে যাচাই করুন।</small></p>
+</div></div>
+
+<!-- MODULE 03 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">০৩</span> গোবর সংগ্রহ ও প্রস্তুতি</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>১. সংগ্রহের সঠিক পদ্ধতি</h4>
+<p>গোশালা থেকে দৈনিক গোবর সংগ্রহ করুন। তাজা গোবর সবচেয়ে ভালো, তবে ১–২ দিনের পুরোনোও ব্যবহারযোগ্য। মাটিতে পলিথিন/পাকা মেঝেতে সংগ্রহ করলে মাটি-বালি মেশে না।</p>
+
+<h4>২. গুণগত মান</h4>
+<p>ভালো গোবর হবে তুলনামূলক ঘন, গাঢ় বাদামি, তীব্র নয় এমন গন্ধযুক্ত। বেশি পানি বা বেশি খড়/বালি থাকলে গুণ কমে।</p>
+
+<h4>৩. বালি, পাথর, প্লাস্টিক অপসারণ</h4>
+<p>ছাঁকনি (sieve) দিয়ে বড় ময়লা, প্লাস্টিক, কাঁটা, পাথর সরান। বালি/মাটি থাকলে digester-এ sedimentation বাড়ে, ভলিউম কমে।</p>
+
+<h4>৪. গোবর ছেঁকে নেওয়া</h4>
+<p>৫–১০ মিমি ছাঁকনি দিয়ে ছেঁকে নিন। মিশ্রণ সহজ হবে এবং পাইপ ব্লক হবে না।</p>
+
+<h4>৫. পানি মেশানোর প্রয়োজন</h4>
+<p>শুকনো গোবর সরাসরি digester-এ দিলে মিশ্রণ কঠিন, পাম্পিং সমস্যা। তাই TS ~৮–১২% লক্ষ্য রেখে পানি মেশান। তবে এই লক্ষ্যমাত্রা ডিজাইন-নির্ভর, সব ক্ষেত্রে প্রযোজ্য নয়।</p>
+
+<h4>৬. Slurry Preparation</h4>
+<p>গোবর + পানি মিশিয়ে সমজাতীয় (homogeneous) মিশ্রণ তৈরি করুন। পাম্পিং সহজ হবে, digester-এ ছড়াবে সমানভাবে।</p>
+
+<h4>৭. Total Solids পরীক্ষা</h4>
+<p>একটি নির্দিষ্ট ওজনের নমুনা ১০৫°C তাপে শুকিয়ে আবার ওজন করুন। শুকনো ওজন ÷ ভেজা ওজন × ১০০ = TS%। ঘরে সাধারণ ওভেন/রোদে শুকিয়ে মোটামুটি অনুমান সম্ভব, তবে সঠিক মাপের জন্য ল্যাব প্রয়োজন।</p>
+
+<h4>৮. Feedstock-এর পরিমাণ নির্ধারণ</h4>
+<p>digester ভলিউম, HRT (Hydraulic Retention Time), গ্যাস চাহিদা অনুযায়ী দৈনিক feed নির্ধারণ করুন। সাধারণত digester-এর কার্যকর ভলিউমের ১/২০–১/৩০ অংশ দৈনিক feed হিসেবে বিবেচনা করা হয়, তবে এটি ডিজাইন-নির্ভর।</p>
+
+<h4>৯. দৈনিক Feed Preparation</h4>
+<p>প্রতিদিন নির্দিষ্ট সময়ে (সকাল/সন্ধ্যা) সমান পরিমাণ feed দিন। হঠাৎ বেশি/কম দিলে অণুজীবের ভারসাম্য নষ্ট হয়।</p>
+
+<h4>১০. সংরক্ষণ</h4>
+<p>অতিরিক্ত গোবর ছায়ায়, পোকামাকড়-মুক্ত স্থানে সংরক্ষণ করুন। ঢেকে রাখলে অ্যামোনিয়া নিঃসরণ কমে এবং বৃষ্টিতে ভিজবে না।</p>
+
+<h4>১১. পুরোনো গোবরের সমস্যা</h4>
+<p>অনেকদিনের পুরোনো গোবরে VS কমে যায়, গ্যাস ইল্ড কমে। আবার বেশি শুকনো হলে মেশানো কঠিন।</p>
+
+<h4>১২. Feedstock Contamination</h4>
+<p>কীটনাশক, সাবান, জীবাণুনাশক, প্লাস্টিক মিশে গেলে অণুজীব মরে, গ্যাস উৎপাদন কমে।</p>
+
+<h4>১৩. Feedstock Mixing</h4>
+<p>একইসাথে গোবর + সবজি বর্জ্য + খড় মিশ্রণ করলে C:N ও পুষ্টি ভালো ভারসাম্য পায়। অনুপাত পরীক্ষা করে নির্ধারণ করুন, অনুমানকে চূড়ান্ত ধরে নেবেন না।</p>
+
+<h4>🧮 Interactive Calculator</h4>
+<p><a href="calculators.html#cowdung" class="btn btn-primary">গোবর প্রস্তুতি ক্যালকুলেটর খুলুন →</a></p>
+</div></div>
+
+<!-- MODULE 04 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">০৪</span> বায়োগ্যাস প্ল্যান্টের ধরন</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>১. Fixed Dome Biogas Plant</h4>
+<p><b>গঠন:</b> শক্ত ইট/কনক্রিটের গম্বুজ। গ্যাস জমা হয় গম্বুজের নিচে।</p>
+<p><b>কার্যপ্রণালী:</b> গ্যাস জমলে চাপ বাড়ে, slurry অন্য পাশে চলে যায়। চাপে গ্যাস সরবরাহ হয়।</p>
+<p><b>উপকরণ:</b> ইট, সিমেন্ট, বালি, রড। <b>আয়ুষ্কাল:</b> ১৫–২৫ বছর (নির্মাণমান-নির্ভর)।</p>
+<p><b>সুবিধা:</b> জমির নিচে, দীর্ঘস্থায়ী, কম জায়গা।</p>
+<p><b>অসুবিধা:</b> ফাটল হলে মেরামত কঠিন, চাপ স্থির নয়, দক্ষ রাজমিস্ত্রি প্রয়োজন।</p>
+<p><b>উপযুক্ত:</b> গ্রামীণ পরিবার, মাঝারি খামার।</p>
+<p><b>সাধারণ সমস্যা:</b> লিক, ফাটল, গ্যাস লিকেজ।</p>
+
+<h4>২. Floating Drum Biogas Plant</h4>
+<p><b>গঠন:</b> নিচে digester, উপরে ফ্লোটিং ড্রাম (গ্যাস হোল্ডার)।</p>
+<p><b>কার্যপ্রণালী:</b> গ্যাস জমলে ড্রাম উঠে, ব্যবহারে নামে; স্থির চাপ।</p>
+<p><b>উপকরণ:</b> ইট/কনক্রিট digester, ধাতু/ফাইবারগ্লাস ড্রাম।</p>
+<p><b>সুবিধা:</b> স্থির চাপ, সহজভাবে গ্যাস ভলিউম দেখা যায়, মেরামত সহজ।</p>
+<p><b>অসুবিধা:</b> ড্রাম মরিচা পড়তে পারে (স্টিল হলে), দাম বেশি।</p>
+<p><b>আয়ুষ্কাল:</b> digester ১৫–২০ বছর, ড্রাম ৫–১৫ বছর।</p>
+
+<h4>৩. Balloon Type Biogas Plant</h4>
+<p><b>গঠন:</b> নমনীয় PVC/প্লাস্টিক ব্যাগ। উপরে গ্যাস, নিচে slurry।</p>
+<p><b>সুবিধা:</b> সস্তা, সহজ ইনস্টলেশন, বহনযোগ্য।</p>
+<p><b>অসুবিধা:</b> কম আয়ুষ্কাল (৩–৭ বছর), প্লাস্টিক ছিঁড়ে যেতে পারে, রোদে ক্ষয়।</p>
+
+<h4>৪. Prefabricated Biogas Plant</h4>
+<p>কারখানায় তৈরি অংশ, সাইটে সংযোজন। দ্রুত ইনস্টলেশন, গুণমান নিয়ন্ত্রিত। তবে সঠিক সাইজ মেলানো ও পরিবহন ব্যয় বিবেচনা করতে হবে।</p>
+
+<h4>৫. Plug Flow Digester</h4>
+<p>লম্বা চ্যানেলে feedstock ধীরে ধীরে প্রবাহিত হয়। বড় খামার/শিল্পে উপযুক্ত। মিক্সিং কম, স্কাম সমস্যা হতে পারে।</p>
+
+<h4>৬. CSTR (Continuous Stirred Tank Reactor)</h4>
+<p>নিরন্তর মিক্সিংযুক্ত বড় ট্যাংক, শিল্প স্কেলে সাধারণ। উন্নত নিয়ন্ত্রণ, বেশি গ্যাস ইল্ড, তবে ব্যয়বহুল ও শক্তি ব্যবহার বেশি।</p>
+
+<h4>৭. Covered Lagoon</h4>
+<p>বড় পুকুরের ওপর আচ্ছাদন, বড় পোল্ট্রি/শূকরের খামারে। কম ব্যয়, তবে গ্যাস সংগ্রহ কম দক্ষ, গন্ধ ও প্যাথোজেন ব্যবস্থাপনা চ্যালেঞ্জ।</p>
+
+<h4>তুলনা টেবিল</h4>
+<div class="table-wrap"><table>
+<thead><tr><th>ধরন</th><th>আয়ুষ্কাল</th><th>খরচ (তুলনামূলক)</th><th>খামার সাইজ</th></tr></thead>
+<tbody>
+<tr><td>Fixed Dome</td><td>১৫–২৫ বছর</td><td>মধ্যম</td><td>ছোট-মাঝারি</td></tr>
+<tr><td>Floating Drum</td><td>১৫–২০+ বছর</td><td>মধ্যম-উচ্চ</td><td>ছোট-মাঝারি</td></tr>
+<tr><td>Balloon</td><td>৩–৭ বছর</td><td>কম</td><td>ছোট</td></tr>
+<tr><td>Prefab</td><td>১০–২০ বছর</td><td>মধ্যম</td><td>ছোট-বড়</td></tr>
+<tr><td>Plug Flow</td><td>২০+ বছর</td><td>উচ্চ</td><td>বড়</td></tr>
+<tr><td>CSTR</td><td>২০+ বছর</td><td>উচ্চ</td><td>বড়/শিল্প</td></tr>
+<tr><td>Covered Lagoon</td><td>১০–২০ বছর</td><td>মধ্যম</td><td>বড়</td></tr>
+</tbody></table></div>
+<p><small>⚠️ খরচ পরিসর দেশ/সময়/নির্মাণমান অনুযায়ী পরিবর্তিত হয়; প্রকৃত হিসাব site survey ও engineer estimate দিয়ে করুন।</small></p>
+</div></div>
+
+<!-- MODULE 05 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">০৫</span> প্ল্যান্ট সাইজিং ও ডিজাইন</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>মূল Parameter</h4>
+<ul>
+<li><b>HRT (Hydraulic Retention Time):</b> slurry digester-এ যত দিন থাকে। সাধারণত ৩০–৬০ দিন (তাপমাত্রা/ডিজাইন-নির্ভর)।</li>
+<li><b>OLR (Organic Loading Rate):</b> দৈনিক প্রতি m³ digester ভলিউমে কত kg VS দেওয়া হয়।</li>
+<li><b>SRT (Solids Retention Time):</b> কঠিন পদার্থের অবস্থানকাল।</li>
+<li><b>Digester Volume:</b> মোট ভলিউম।</li>
+<li><b>Gas Holder Volume:</b> দৈনিক গ্যাসের ~৫০–৭০%।</li>
+</ul>
+
+<h4>মৌলিক সূত্র</h4>
+<div class="formula">Slurry Volume (m³/day) ≈ Dung (kg) ÷ (TS% / 100)<br>
+Digester Volume (m³) ≈ Slurry Volume × HRT<br>
+Gas Production ≈ Dung (kg) × Yield (m³/kg)<br>
+Gas Storage ≈ Gas Production × 0.6</div>
+
+<h4>অন্যান্য Component</h4>
+<ul>
+<li><b>Inlet Chamber:</b> Feed মিশ্রণ প্রবেশপথ। ঢালু মেঝে সহজ প্রবাহ দেয়।</li>
+<li><b>Outlet Chamber:</b> Digestate বের হওয়ার পথ।</li>
+<li><b>Overflow Tank:</b> অতিরিক্ত slurry ধারণ।</li>
+<li><b>Foundation:</b> মাটির ভারবহন ক্ষমতা অনুযায়ী।</li>
+<li><b>Drainage:</b> বৃষ্টির পানি ও নিচের চাপ নিয়ন্ত্রণ।</li>
+<li><b>Waterproofing:</b> লিক প্রতিরোধ।</li>
+<li><b>Insulation:</b> শীতে তাপমাত্রা রক্ষা।</li>
+<li><b>Ventilation:</b> গ্যাস জমা রোধ।</li>
+<li><b>Accessibility:</b> মেরামতের জন্য প্রবেশযোগ্য।</li>
+</ul>
+
+<h4>🧮 Interactive Calculator</h4>
+<p><a href="calculators.html#biogassize" class="btn btn-primary">প্ল্যান্ট সাইজিং ক্যালকুলেটর →</a></p>
+
+<div class="alert alert-warn">⚠️ এটি প্রাথমিক অনুমান। বাস্তব নির্মাণের জন্য site-specific soil test, engineer design ও অনুমোদন প্রয়োজন। একক মানকে সব প্ল্যান্টের জন্য প্রযোজ্য ধরে নেবেন না।</div>
+</div></div>
+
+<!-- MODULE 06 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">০৬</span> Anaerobic Digestion-এর চার ধাপ</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>ধাপ ১: Hydrolysis (হাইড্রোলাইসিস)</h4>
+<p><b>কী ঘটে:</b> জটিল পলিমার (সেলুলোজ, প্রোটিন, ফ্যাট) সরল অণুতে ভাঙে।</p>
+<p><b>অণুজীব:</b> Fermentative bacteria।</p>
+<p><b>রাসায়নিক পরিবর্তন:</b> কার্বোহাইড্রেট → শর্করা, প্রোটিন → অ্যামিনো অ্যাসিড, ফ্যাট → ফ্যাটি অ্যাসিড।</p>
+<p><b>সমস্যা হলে:</b> ধীর গতিতে গ্যাস উৎপাদন কমে।</p>
+
+<h4>ধাপ ২: Acidogenesis</h4>
+<p>সরল অণু থেকে Volatile Fatty Acids (VFA), অ্যালকোহল, অ্যামোনিয়া, CO₂, H₂ তৈরি হয়। pH কমে যেতে পারে।</p>
+
+<h4>ধাপ ৩: Acetogenesis</h4>
+<p>VFA থেকে অ্যাসিটেট, H₂, CO₂ উৎপন্ন হয়। H₂-উৎপাদনকারী ও H₂-ভোক্তা ব্যাকটেরিয়ার ভারসাম্য জরুরি।</p>
+
+<h4>ধাপ ৪: Methanogenesis</h4>
+<p>Methanogens অ্যাসিটেট, H₂, CO₂ থেকে CH₄ তৈরি করে। এই ধাপ সবচেয়ে সংবেদনশীল — pH কমলে, O₂ ঢুকলে, তাপমাত্রা বদলালে মিথেন উৎপাদন বন্ধ হতে পারে।</p>
+
+<h4>সমস্যা ও লক্ষণ</h4>
+<ul>
+<li><b>Acid Accumulation (অ্যাসিড জমা):</b> VFA বাড়ে, pH কমে, গ্যাস কমে।</li>
+<li><b>Ammonia Inhibition:</b> অ্যামোনিয়া বেশি হলে অণুজীব বিষাক্ত হয়।</li>
+<li><b>Organic Overloading:</b> বেশি feed দিলে অ্যাসিড জমে।</li>
+<li><b>pH Stability:</b> আদর্শ ৬.৮–৭.৪ (নির্দিষ্ট ডিজাইন-নির্ভর)।</li>
+<li><b>Alkalinity (বাফারিং ক্ষমতা):</b> ২৫০০–৫০০০ mg/L CaCO₃ পরিসর সাধারণত ভালো, তবে ডিজাইন-নির্ভর।</li>
+</ul>
+<p><small>⚠️ উপরের সংখ্যাগুলো পরিসর-নির্দেশক; চূড়ান্ত মান হিসেবে ব্যবহার করবেন না।</small></p>
+</div></div>
+
+<!-- MODULE 07 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">০৭</span> প্ল্যান্ট ইনস্টলেশন</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>Site Selection Criteria</h4>
+<ul>
+<li>বাড়ি থেকে নিরাপদ দূরত্ব (গ্যাস লিক ঝুঁকি বিবেচনা)</li>
+<li>Feedstock সহজে আনা যায়</li>
+<li>পানি সহজলভ্য</li>
+<li>প্লাবন ঝুঁকি কম</li>
+<li>ভালো নিষ্কাশন (drainage)</li>
+<li>উত্তর-দক্ষিণে গাছ বাধা নয়</li>
+<li>Digestate সহজে সরানো যায়</li>
+</ul>
+
+<h4>মাটির শর্ত</h4>
+<p>ভারবহন ক্ষমতা, ভূগর্ভস্থ পানি স্তর, মাটির ধরন (দোআঁশ/এঁটেল) পরীক্ষা করতে হবে।</p>
+
+<h4>নির্মাণ ধাপ (সারসংক্ষেপ)</h4>
+<ol>
+<li>Layout চিহ্নিতকরণ</li>
+<li>খনন ও ফাউন্ডেশন</li>
+<li>Digester নির্মাণ</li>
+<li>গ্যাস হোল্ডার (প্রযোজ্য হলে)</li>
+<li>Inlet/Outlet</li>
+<li>গ্যাস পাইপলাইন</li>
+<li>Leak Test</li>
+<li>Commissioning</li>
+<li>Initial Feeding</li>
+</ol>
+
+<h4>Leak Test</h4>
+<p>পানি বা চাপযুক্ত বাতাস দিয়ে চাপ ধরে রাখা যায় কি না দেখুন। সাবান পানির ফোঁপা (bubble test) দিয়ে জয়েন্ট পরীক্ষা করুন। কখনোই আগুন দিয়ে লিক পরীক্ষা করবেন না।</p>
+
+<h4>Commissioning</h4>
+<p>প্রথমে পানি দিয়ে পূর্ণ করুন, তারপর ধীরে ধীরে feedstock দিন। প্রথম কয়েক সপ্তাহে গ্যাস কম হবে — এটা স্বাভাবিক, কারণ অণুজীব গড়ে উঠছে।</p>
+
+<h4>সাধারণ ভুল</h4>
+<ul>
+<li>Leak test না করা</li>
+<li>অতিরিক্ত initial feeding</li>
+<li>পাইপ ঢাল (slope) ভুল</li>
+<li>Condensate trap না রাখা</li>
+<li>Drainage না থাকা</li>
+</ul>
+
+<div class="alert alert-danger">⚠️ বিপজ্জনক প্রেসার ভেসেল, গ্যাস লাইন বা digester নিজে ডিজাইন বা নির্মাণ করবেন না। যোগ্য প্রকৌশলী ও প্রশিক্ষিত টেকনিশিয়ানের তত্ত্বাবধান বাধ্যতামূলক।</div>
+</div></div>
+
+<!-- MODULE 08 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">০৮</span> গ্যাস সংগ্রহ, পরিশোধন ও সংরক্ষণ</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>প্রতিটি যন্ত্রের কাজ</h4>
+<ul>
+<li><b>Gas Holder:</b> উৎপন্ন গ্যাস জমা রাখে।</li>
+<li><b>Gas Pipeline:</b> গ্যাস পরিবহন। ঢাল দিয়ে condensate trap-এ পানি জমা হয়।</li>
+<li><b>Condensate Trap:</b> পাইপে জলীয় বাষ্প থেকে তৈরি পানি জমা হয় ও নির্গত হয়।</li>
+<li><b>H₂S Removal:</b> Iron Oxide (লোহার অক্সাইড) ভিত্তিক ফিল্টার; পরে Activated Carbon।</li>
+<li><b>Gas Filter:</b> ধুলা/ময়লা আটকায়।</li>
+<li><b>Pressure Regulator:</b> ব্যবহারস্থলে গ্যাসের চাপ নিয়ন্ত্রণ করে।</li>
+<li><b>Flame Arrestor:</b> আগুন প্ল্যান্টে ফিরে যাওয়া রোধ করে।</li>
+<li><b>Non-return Valve:</b> গ্যাস উল্টো প্রবাহ রোধ।</li>
+<li><b>Pressure Relief:</b> অতি চাপে গ্যাস ছেড়ে দেয়।</li>
+<li><b>Gas Meter:</b> উৎপাদন/ব্যবহার পরিমাপ।</li>
+<li><b>Leak Detector:</b> মিথেন শনাক্তকরণ।</li>
+</ul>
+
+<h4>Gas Quality পরীক্ষা</h4>
+<p>পরিশোধনের আগে ও পরে গ্যাস স্যাম্পল নিয়ে মিথেন %, H₂S ppm পরিমাপ করুন (portable gas analyzer দিয়ে)। নিয়মিত (মাসিক) H₂S পরিমাপ করুন।</p>
+
+<div class="alert alert-warn">⚠️ H₂S ফিল্টার সময়মতো পরিবর্তন করুন, নাহলে গ্যাস লাইন ও যন্ত্রপাতি ক্ষয় হবে। ফিল্টার খোলার সময় PPE ব্যবহার করুন।</div>
+</div></div>
+
+<!-- MODULE 09 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">০৯</span> বায়োগ্যাস ব্যবহার</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>বিভিন্ন ব্যবহার</h4>
+<ul>
+<li><b>রান্না:</b> biogas stove; মিথেন ~৫০–৬০% হলেই সাধারণত কাজ করে, তবে উন্নত চুলায় বেশি দক্ষতা।</li>
+<li><b>পানি গরম:</b> water heater।</li>
+<li><b>বিদ্যুৎ:</b> biogas generator (100% মিথেনে সর্বোচ্চ কার্যকারিতা)।</li>
+<li><b>CHP:</b> বিদ্যুৎ + তাপ একসাথে ব্যবহার।</li>
+<li><b>বয়লার:</b> বাষ্প উৎপাদন।</li>
+<li><b>Biomethane:</b> CO₂ ও H₂S সরিয়ে প্রাকৃতিক গ্যাসের মানে আপগ্রেড; CNG-এর মতো ব্যবহার।</li>
+</ul>
+
+<h4>প্রতিটি ব্যবহারে প্রয়োজন</h4>
+<div class="table-wrap"><table>
+<thead><tr><th>ব্যবহার</th><th>Gas Quality</th><th>Equipment</th><th>মূল সমস্যা</th></tr></thead>
+<tbody>
+<tr><td>Cooking</td><td>CH₄ ≥৫০%</td><td>Stove, regulator</td><td>H₂S গন্ধ</td></tr>
+<tr><td>Generator</td><td>CH₄ ≥৫৫%, H₂S কম</td><td>Biogas genset</td><td>H₂S ক্ষয়</td></tr>
+<tr><td>CHP</td><td>CH₄ ≥৫৫%, পরিশোধিত</td><td>CHP unit</td><td>জটিল ইনস্টলেশন</td></tr>
+<tr><td>Biomethane</td><td>CH₄ ≥৯৫%</td><td>Upgrading unit</td><td>খরচ বেশি</td></tr>
+</tbody></table></div>
+
+<h4>🧮 ক্যালকুলেটর</h4>
+<p><a href="calculators.html#energy" class="btn btn-primary">Energy Conversion Calculator →</a></p>
+</div></div>
+
+<!-- MODULE 10 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">১০</span> অপারেশন ও মনিটরিং</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>Daily Operation</h4>
+<ul>
+<li>সকাল-সন্ধ্যা নির্দিষ্ট সময়ে feedstock।</li>
+<li>Slurry mixing (যেখানে প্রযোজ্য)।</li>
+<li>Gas pressure ও production রেকর্ড।</li>
+<li>তাপমাত্রা (যদি monitor থাকে)।</li>
+<li>Leakage inspection।</li>
+<li>Outlet অবস্থা দেখা।</li>
+</ul>
+
+<h4>Weekly Operation</h4>
+<ul>
+<li>Pipe, valve পরীক্ষা।</li>
+<li>Condensate trap খালি করা।</li>
+<li>Filter inspect।</li>
+<li>Slurry গুণগত অবস্থা।</li>
+<li>Gas quality approx।</li>
+</ul>
+
+<h4>Monthly Operation</h4>
+<ul>
+<li>Digester inspect।</li>
+<li>Equipment inspect।</li>
+<li>Production analysis।</li>
+<li>Maintenance schedule।</li>
+<li>Performance review।</li>
+</ul>
+
+<p><a href="dashboard.html#logs" class="btn btn-primary">Daily Log System →</a></p>
+</div></div>
+
+<!-- MODULE 11 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">১১</span> প্রসেস কন্ট্রোল ও ল্যাব টেস্টিং</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>মূল Test ও তাদের প্রয়োজন</h4>
+<div class="table-wrap"><table>
+<thead><tr><th>Test</th><th>কেন</th><th>ফার্মে সম্ভব?</th></tr></thead>
+<tbody>
+<tr><td>pH</td><td>প্রসেস স্থিতিশীলতা</td><td>✔ pH meter</td></tr>
+<tr><td>Temperature</td><td>অণুজীব কার্যক্ষমতা</td><td>✔ থার্মোমিটার</td></tr>
+<tr><td>TS</td><td>Feed গঠন</td><td>△ ওভেন দরকার</td></tr>
+<tr><td>VS</td><td>জৈব ভগ্নাংশ</td><td>△ ল্যাব</td></tr>
+<tr><td>COD</td><td>জৈব লোড</td><td>✘ ল্যাব</td></tr>
+<tr><td>BOD</td><td>জৈব দূষণ</td><td>✘ ল্যাব</td></tr>
+<tr><td>Alkalinity</td><td>বাফারিং</td><td>△ টাইট্রেশন</td></tr>
+<tr><td>VFA</td><td>অ্যাসিড জমা</td><td>✘ ল্যাব</td></tr>
+<tr><td>Ammonia</td><td>বিষাক্ততা</td><td>✘ ল্যাব</td></tr>
+<tr><td>C:N</td><td>পুষ্টি ভারসাম্য</td><td>✘ ল্যাব</td></tr>
+<tr><td>Gas Composition</td><td>গুণগত মান</td><td>✔ Portable analyzer</td></tr>
+<tr><td>H₂S</td><td>ক্ষয় ঝুঁকি</td><td>✔ Detector tube</td></tr>
+</tbody></table></div>
+
+<h4>Sample Collection</h4>
+<p>digester-এর মধ্যস্থান থেকে নমুনা নিন, বায়ুশূন্য পাত্রে সংরক্ষণ করুন, দ্রুত ল্যাবে পাঠান। তাপমাত্রা ও সময় লিপিবদ্ধ করুন।</p>
+
+<h4>Result Interpretation</h4>
+<p>প্রতিটি প্যারামিটারের জন্য trend দেখা জরুরি — একক রিডিং নয়। pH হঠাৎ কমে গেলে VFA জমা সন্দেহ। Ammonia বেশি হলে feed পরিবর্তন।</p>
+
+<h4>Corrective Action</h4>
+<ul>
+<li>pH কম: feed কমান, বেকিং সোডা (Caution) অথবা চুন যোগ (engineer পরামর্শে)।</li>
+<li>Ammonia বেশি: co-digestion বা dilution।</li>
+<li>H₂S বেশি: ফিল্টার পরিবর্তন/আপগ্রেড।</li>
+</ul>
+</div></div>
+
+<!-- MODULE 12 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">১২</span> ডাইজেস্টেট ও স্লারি ব্যবস্থাপনা</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>Digestate কী?</h4>
+<p>Anaerobic digestion-এর পর অবশিষ্ট তরল/কঠিন মিশ্রণ। এতে আংশিক ভাঙা জৈব পদার্থ, খনিজ পুষ্টি, পানি ও অণুজীব থাকে।</p>
+
+<h4>Raw Slurry বনাম Digestate</h4>
+<p>Raw slurry হলো টাটকা গোবর-পানি মিশ্রণ। Digestate হলো digester-এর ভেতরে জৈবিক পরিবর্তনের পর বের হওয়া মিশ্রণ। Digestate-এ অ্যামোনিয়াম নাইট্রোজেন বেশি থাকে, গন্ধ কম, প্যাথোজেন কিছুটা কমে (তবে সম্পূর্ণ নয়)।</p>
+
+<h4>Solid-Liquid Separation</h4>
+<p>Mechanical separator (screw press), Settling tank বা Drying bed দিয়ে কঠিন ও তরল অংশ আলাদা করা যায়। কঠিন অংশ কম্পোস্ট/ভার্মিকম্পোস্ট feedstock হিসেবে বিবেচ্য; তরল অংশ liquid fertilizer।</p>
+
+<h4>Nutrient Composition</h4>
+<ul>
+<li>Nitrogen (N) — মূলত অ্যামোনিয়াম আকারে</li>
+<li>Phosphorus (P)</li>
+<li>Potassium (K)</li>
+<li>Organic Matter</li>
+<li>pH, EC (Electrical Conductivity)</li>
+<li>Moisture</li>
+</ul>
+<p><small>⚠️ প্রতিটি digestate-এর পুষ্টি মান ভিন্ন। ব্যবহারের আগে পরীক্ষা করুন।</small></p>
+
+<h4>ঝুঁকি</h4>
+<ul>
+<li>Pathogens (Salmonella, E. coli ইত্যাদি)</li>
+<li>Heavy metals (feedstock উৎস-নির্ভর)</li>
+<li>উচ্চ EC/লবণাক্ততা</li>
+<li>অ্যামোনিয়া বিষাক্ততা (কেঁচোর জন্য)</li>
+<li>গন্ধ</li>
+</ul>
+
+<h4>ব্যবহার</h4>
+<ul>
+<li>Liquid Fertilizer (diluted)</li>
+<li>Solid Organic Fertilizer (কম্পোস্ট করে)</li>
+<li>Soil Amendment</li>
+<li>Composting feedstock</li>
+<li>Vermicomposting feedstock (শুধু প্রস্তুতি ও পরীক্ষার পর)</li>
+</ul>
+
+<div class="alert alert-danger">⚠️ কোনো digestate সরাসরি নিরাপদ সার বা কেঁচোর খাদ্য — এমন দাবি করা যাবে না। পরীক্ষা ও প্রক্রিয়াকরণ ছাড়া ব্যবহার করবেন না।</div>
+</div></div>
+
+<!-- MODULE 13 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">১৩</span> ট্রাবলশুটিং গাইড</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<div class="table-wrap"><table>
+<thead><tr><th>সমস্যা</th><th>সম্ভাব্য কারণ</th><th>পরীক্ষা</th><th>সমাধান</th><th>কী করবেন না</th></tr></thead>
+<tbody>
+<tr><td>গ্যাস কম</td><td>Underfeeding, ঠান্ডা, লিক</td><td>Feed, তাপমাত্রা, চাপ</td><td>Feed সমন্বয়, ইনসুলেশন, লিক সারাই</td><td>হঠাৎ বেশি feed</td></tr>
+<tr><td>গ্যাস বন্ধ</td><td>Overloading, বিষাক্ত পদার্থ</td><td>pH, VFA</td><td>Feed বন্ধ, ধীরে পুনরায় শুরু</td><td>রাসায়নিক নিক্ষেপ</td></tr>
+<tr><td>চাপ কম</td><td>লিক, ফাটল</td><td>সাবান পানিতে bubble</td><td>সিল্যান্ট/মেরামত</td><td>আগুনে লিক খোঁজা</td></tr>
+<tr><td>চাপ বেশি</td><td>Relief malfunction</td><td>Relief valve</td><td>প্রেসার রিলিফ যাচাই</td><td>জোর করে খোলা</td></tr>
+<tr><td>Acidification</td><td>Overloading</td><td>pH, VFA</td><td>Feed কমান, বাফার</td><td>pH বাড়াতে বেশি চুন</td></tr>
+<tr><td>Ammonia inhibition</td><td>উচ্চ N feedstock</td><td>NH₃ test</td><td>Co-digestion, dilution</td><td>সরাসরি বেশি পোল্ট্রি বর্জ্য</td></tr>
+<tr><td>Foam/Scum</td><td>Fats, fibers</td><td>দৃশ্য</td><td>মিক্সিং, স্কিম অপসারণ</td><td>ফোমিং শক্তিশালী করা</td></tr>
+<tr><td>Pipe block</td><td>Condensate, স্কাম</td><td>দৃশ্য</td><td>Trap খালি, পাইপ পরিষ্কার</td><td>জোর প্রয়োগ</td></tr>
+<tr><td>H₂S বেশি</td><td>High sulfate feedstock</td><td>H₂S test</td><td>Iron sponge ফিল্টার</td><td>অবহেলা</td></tr>
+<tr><td>Bad odour</td><td>Overloading, anaerobic problem</td><td>pH, feed</td><td>Feed সমন্বয়, সার্কুলেশন</td><td>রাসায়নিক স্প্রে</td></tr>
+</tbody></table></div>
+<p><small>⚠️ উপসর্গ দেখা দিলে প্রথমে ডেটা সংগ্রহ ও ধীরে পরিবর্তন। বড় সমস্যায় বিশেষজ্ঞ ডাকুন।</small></p>
+</div></div>
+
+<!-- MODULE 14 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">১৪</span> নিরাপত্তা ও জরুরি ব্যবস্থাপনা</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>প্রধান ঝুঁকি</h4>
+<ul>
+<li><b>Methane Explosion:</b> ৫–১৫% বাতাসে মিথেন বিস্ফোরক।</li>
+<li><b>H₂S Toxicity:</b> ১০০+ ppm প্রাণঘাতী; গন্ধ শনাক্ত ক্ষমতা হারিয়ে যায়।</li>
+<li><b>CO₂ Asphyxiation:</b> বদ্ধ স্থানে অক্সিজেন কমিয়ে দম বন্ধ।</li>
+<li><b>Oxygen Deficiency:</b> Confined space-এ মারাত্মক।</li>
+<li><b>Fire:</b> আগুনের উৎস থেকে দূরে রাখুন।</li>
+<li><b>Pressure:</b> অতি চাপে বিস্ফোরণ।</li>
+<li><b>Electrical:</b> জলীয় পরিবেশে বৈদ্যুতিক বিপদ।</li>
+<li><b>Chemical:</b> পরিষ্কারক ও সার নিরাপদে সংরক্ষণ।</li>
+</ul>
+
+<h4>PPE</h4>
+<ul>
+<li>গ্লাভস (নাইট্রাইল)</li>
+<li>মাস্ক (H₂S-এ SR বা SCBA)</li>
+<li>গগলস</li>
+<li>সুরক্ষা জুতা</li>
+<li>হাই-ভিজিবিলিটি জ্যাকেট</li>
+</ul>
+
+<h4>জরুরি পদক্ষেপ</h4>
+<ol>
+<li>গ্যাস লিক বুঝলে সব ইগনিশন উৎস বন্ধ করুন।</li>
+<li>এলাকা খালি করুন।</li>
+<li>Ventilation চালু করুন (নিরাপদ হলে)।</li>
+<li>প্রশিক্ষিত ব্যক্তি ছাড়া confined space-এ প্রবেশ করবেন না।</li>
+<li>ফায়ার সার্ভিস/ইমার্জেন্সি কল করুন।</li>
+</ol>
+
+<div class="alert alert-danger">
+<ul style="margin-bottom:0">
+<li>গন্ধের ওপর নির্ভর করবেন না — H₂S গন্ধ শনাক্ত ক্ষমতা হারায়।</li>
+<li>Digester/confined space-এ প্রশিক্ষণ ও SCBA ছাড়া কখনোই প্রবেশ করবেন না।</li>
+<li>লিক পরীক্ষা আগুন দিয়ে করবেন না।</li>
+<li>গ্যাস লাইনে অনিরাপদ পরিবর্তন করবেন না।</li>
+<li>বিপদে এলাকা খালি করে জরুরি সহায়তা নিন।</li>
+</ul>
+</div>
+</div></div>
+
+<!-- MODULE 15 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">১৫</span> মেইনটেনেন্স ও স্পেয়ার পার্টস</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>Daily</h4>
+<ul><li>Feed পরিমাণ ও ধরন রেকর্ড</li><li>Gas pressure</li><li>Leakage glance</li><li>Slurry level</li></ul>
+<h4>Weekly</h4>
+<ul><li>Pipe/valve inspect</li><li>Condensate খালি</li><li>Filter state</li></ul>
+<h4>Monthly</h4>
+<ul><li>Digester inspect (নিরাপদভাবে)</li><li>Gas meter রিডিং</li><li>Production trend</li></ul>
+<h4>Annual</h4>
+<ul><li>Full leak test</li><li>H₂S ফিল্টার পরিবর্তন</li><li>Valve service</li><li>Gas holder inspection</li><li>Pipe corrosion চেক</li></ul>
+
+<h4>Corrosion Management</h4>
+<p>H₂S ও জলীয় বাষ্পে ধাতু ক্ষয় হয়। Epoxy-coated pipe, galvanized অংশ, নিয়মিত পরিষ্কার, condensate drainage — এসব দিয়ে ক্ষয় কমিয়ে রাখুন।</p>
+
+<h4>Spare Parts Inventory</h4>
+<ul>
+<li>H₂S filter media</li>
+<li>Gas pipe fittings</li>
+<li>Valves (ball, non-return)</li>
+<li>Regulator</li>
+<li>Flame arrestor</li>
+<li>Pressure gauge</li>
+<li>পাম্প seal</li>
+<li>Gasket</li>
+</ul>
+
+<h4>Maintenance Calendar</h4>
+<div class="table-wrap"><table><thead><tr><th>কাজ</th><th>ফ্রিকোয়েন্সি</th></tr></thead><tbody>
+<tr><td>Feed রেকর্ড</td><td>দৈনিক</td></tr>
+<tr><td>Pressure চেক</td><td>দৈনিক</td></tr>
+<tr><td>Pipe inspect</td><td>সাপ্তাহিক</td></tr>
+<tr><td>Condensate drain</td><td>সাপ্তাহিক</td></tr>
+<tr><td>Filter check</td><td>মাসিক</td></tr>
+<tr><td>Gas meter reading</td><td>মাসিক</td></tr>
+<tr><td>Full leak test</td><td>বার্ষিক</td></tr>
+<tr><td>Filter replacement</td><td>বার্ষিক বা প্রয়োজনে</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- MODULE 16 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">১৬</span> বায়োগ্যাস বিজনেস ও আর্থিক পরিকল্পনা</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>Business Model</h4>
+<ol>
+<li>নিজের ব্যবহার (জ্বালানি সাশ্রয়)</li>
+<li>Commercial Gas Production</li>
+<li>Electricity Production</li>
+<li>Digestate Sales</li>
+<li>Integrated Biogas + Vermicompost</li>
+</ol>
+
+<h4>Cost Components</h4>
+<ul>
+<li>Plant Construction Cost</li>
+<li>Land Cost</li>
+<li>Labour</li>
+<li>Cow Dung Cost</li>
+<li>Water, Electricity</li>
+<li>Maintenance</li>
+<li>Equipment</li>
+</ul>
+
+<h4>Revenue Components</h4>
+<ul>
+<li>Gas Savings / Gas Sales</li>
+<li>Electricity Savings</li>
+<li>Digestate Sales</li>
+<li>Vermicompost Sales</li>
+<li>Worm Sales</li>
+</ul>
+
+<h4>মূল সূত্র</h4>
+<div class="formula">
+Daily Revenue = Gas×Price + Digestate Sales<br>
+Monthly Revenue = Daily × Days<br>
+Net Profit = Revenue − Expense<br>
+Payback = CAPEX ÷ Net Profit/Month<br>
+ROI % = Net Profit / CAPEX × 100
+</div>
+
+<h4>🧮 ক্যালকুলেটর</h4>
+<p><a href="calculators.html#biz" class="btn btn-primary">Biogas Business Calculator →</a></p>
+<p><small>⚠️ সব দাম ব্যবহারকারী নিজে ইনপুট দিয়ে হিসাব করবেন। কোনো অযাচাইকৃত বাজারদর নিশ্চিত দাম হিসেবে দেখানো হয়নি।</small></p>
+</div></div>
+
+<div class="footer">© BioVermi Bangladesh — বায়োগ্যাস মডিউল</div>
+</div></div></div>
+<script src="script.js"></script>
+</body></html>
