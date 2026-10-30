@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ভার্মিকম্পোস্ট মডিউল — BioVermi</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="overlay" id="overlay"></div>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><span class="brand-icon">🌱</span><span class="brand-text">BioVermi<small>Bangladesh</small></span></div>
+  <nav>
+    <div class="nav-section"><div class="nav-section-title">প্রধান</div><a href="index.html">🏠 হোম</a><a href="dashboard.html">📊 ড্যাশবোর্ড</a><a href="calculators.html">🧮 ক্যালকুলেটর</a></div>
+    <div class="nav-section"><div class="nav-section-title">শিক্ষা</div><a href="biogas.html">🔥 বায়োগ্যাস</a><a href="vermicompost.html" class="active">🪱 ভার্মিকম্পোস্ট</a><a href="integrated-farm.html">♻️ ইন্টিগ্রেটেড</a></div>
+    <div class="nav-section"><div class="nav-section-title">ব্যবসা</div><a href="business.html">💼 বিজনেস</a></div>
+    <div class="nav-section"><div class="nav-section-title">রেফারেন্স</div><a href="glossary.html">📖 গ্লসারি</a><a href="references.html">🔗 রেফারেন্স</a><a href="learning.html">🎓 রোডম্যাপ</a></div>
+  </nav>
+</aside>
+<div class="main">
+<div class="topbar"><button class="hamburger" id="hamburger">☰</button>
+<div class="search-box"><input type="text" id="siteSearch" placeholder="মডিউল সার্চ..."></div>
+<div class="topbar-actions"><button class="icon-btn" id="themeToggle">🌓</button></div></div>
+<div class="content">
+<div class="page-header"><h1>🪱 ভার্মিকম্পোস্ট — সম্পূর্ণ মডিউল (১৭–৩৯)</h1>
+<p>কেঁচোর প্রজাতি থেকে বাণিজ্যিক উৎপাদন, ডাইজেস্টেট ইন্টিগ্রেশন, তিন বেড সিস্টেম, কোয়ালিটি টেস্টিং পর্যন্ত সবকিছু।</p></div>
+
+<div class="alert alert-info">💡 এই পৃষ্ঠায় ২৩টি মডিউল সাজানো আছে — প্রতিটি বিস্তারিতভাবে ডিজাইন করা।</div>
+
+<!-- M17 -->
+<div class="module open"><div class="module-header"><span><span class="mod-num">১৭</span> ভার্মিকম্পোস্ট মৌলিক ধারণা</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>Vermicompost কী?</h4><p>কেঁচোর হজমতন্ত্রের মধ্য দিয়ে জৈব পদার্থ অতিক্রম করে যেভাবে নির্গত হয়, তাকে vermicompost বা vermicast বলা হয়। এতে উদ্ভিদ-উপযোগী পুষ্টি, হিউমিক অ্যাসিড, উপকারী অণুজীব থাকে।</p>
+<h4>Vermiculture কী?</h4><p>কেঁচো পালন ও বংশবিস্তার প্রক্রিয়া।</p>
+<h4>Composting vs Vermicomposting</h4><div class="table-wrap"><table><thead><tr><th>বিষয়</th><th>Composting</th><th>Vermicomposting</th></tr></thead><tbody>
+<tr><td>প্রধান এজেন্ট</td><td>অণুজীব</td><td>কেঁচো + অণুজীব</td></tr>
+<tr><td>সময়</td><td>২–৩ মাস</td><td>৪–৮ সপ্তাহ (পরিবেশ-নির্ভর)</td></tr>
+<tr><td>পণ্য</td><td>সাধারণ কম্পোস্ট</td><td>উন্নতমানের vermicompost</td></tr>
+<tr><td>তাপমাত্রা</td><td>উচ্চ (thermophilic)</td><td>মধ্যম (mesophilic)</td></tr>
+</tbody></table></div>
+<h4>Ordinary Compost বনাম Vermicompost</h4><p>Vermicompostে পুষ্টি ও হিউমিক পদার্থ বেশি, গঠন সূক্ষ্ম, গন্ধ কম, উপকারী অণুজীব সমৃদ্ধ।</p>
+<h4>Organic Fertilizer ও Soil Amendment</h4><p>জৈব সার = উদ্ভিদ পুষ্টি সরবরাহ। Soil amendment = মাটির গঠন, জলধারণ, অণুজীব বৈচিত্র্য উন্নত করা। Vermicompost উভয়ই।</p>
+<h4>Soil Microbiology</h4><p>ভার্মিকম্পোস্টে Beneficial bacteria, fungi, actinomycetes সমৃদ্ধ, যা মাটির পুষ্টিচক্র সক্রিয় রাখে।</p>
+<h4>Nutrient Cycling</h4><p>জৈব পদার্থ → কেঁচো ও অণুজীব → খনিজ পুষ্টি → উদ্ভিদ → আবার জৈব বর্জ্য।</p>
+<h4>মাটির গঠন ও জলধারণ</h4><p>ভার্মিকম্পোস্ট মাটির আঠালো ভাব বাড়ায়, বায়ু চলাচল ও পানি ধরে রাখার ক্ষমতা বাড়ায়।</p>
+<h4>Biological Process Diagram</h4>
+<div class="formula">জৈব বর্জ্য → প্রি-কম্পোস্ট → কেঁচো ingestion → Gut microbes → Casting → Maturation → Vermicompost</div>
+</div></div>
+
+<!-- M18 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">১৮</span> কেঁচোর প্রজাতি ও নির্বাচন</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>প্রজাতি তুলনা</h4>
+<div class="table-wrap"><table><thead><tr><th>প্রজাতি</th><th>আকার</th><th>তাপমাত্রা</th><th>আর্দ্রতা</th><th>বাংলাদেশে উপযুক্ততা</th></tr></thead><tbody>
+<tr><td>Eisenia fetida</td><td>৬–১০ সেমি</td><td>১৫–২৫°C</td><td>৭০–৮০%</td><td>শীতে ভালো, গ্রীষ্মে সতর্কতা</td></tr>
+<tr><td>Eisenia andrei</td><td>সাদৃশ্য fetida</td><td>১৫–২৫°C</td><td>৭০–৮০%</td><td>একই</td></tr>
+<tr><td>Eudrilus eugeniae</td><td>১০–১৫ সেমি</td><td>২০–৩০°C</td><td>৭০–৮০%</td><td>উষ্ণ আবহাওয়ায় ভালো</td></tr>
+<tr><td>Perionyx excavatus</td><td>৬–১২ সেমি</td><td>২০–৩০°C</td><td>৭০–৮০%</td><td>স্থানীয়, গ্রীষ্মে ভালো</td></tr>
+</tbody></table></div>
+<p><small>⚠️ শুধু রঙ/আকার দেখে শনাক্ত করবেন না — বিশেষজ্ঞের পরামর্শ নিন।</small></p>
+<h4>প্রতিটি প্রজাতির বৈশিষ্ট্য</h4>
+<p>Eisenia fetida — "Tiger worm", দ্রুত প্রজনন, কম্পোস্টে উপযুক্ত। Eudrilus eugeniae — "African nightcrawler", বড়, উষ্ণ সহনশীল। Perionyx excavatus — স্থানীয়, উষ্ণ আবহাওয়ায় ভালো।</p>
+</div></div>
+
+<!-- M19 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">১৯</span> কেঁচোর জীবনচক্র</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>Life Cycle ধাপ</h4>
+<ol>
+<li>Adult worm — clitellum (বেল্ট-সদৃশ অঙ্গ) পরিণত।</li>
+<li>Mating — দুটি কেঁচো মিলিত হয়, উভয়ের clitellum থেকে cocoon তৈরি হয়।</li>
+<li>Cocoon formation — ডিমসহ সুরক্ষা ক্যাপসুল।</li>
+<li>Cocoon development — ২–৩ সপ্তাহ (তাপমাত্রা-নির্ভর)।</li>
+<li>Hatching — ২–৫ juvenile বের হয়।</li>
+<li>Juvenile — পূর্ণ বিকাশে ৪–৬ সপ্তাহ।</li>
+<li>Mature worm — পুনরায় প্রজননে সক্ষম।</li>
+</ol>
+<p>Lifespan সাধারণত ১–২ বছর। Population doubling — ৬০–৯০ দিনে দ্বিগুণ (পরিবেশ-নির্ভর)।</p>
+<p><small>⚠️ সংখ্যাগুলো সাধারণ পরিসর; প্রজাতি, তাপমাত্রা, খাদ্য অনুযায়ী পরিবর্তিত হয়।</small></p>
+</div></div>
+
+<!-- M20 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">২০</span> সংগ্রহ, ক্রয় ও Quarantine</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<ul>
+<li>স্থানীয় বিশ্বস্ত breeder বা কৃষি প্রতিষ্ঠান থেকে কিনুন।</li>
+<li>Species verification — विशेषজ্ঞের মাধ্যমে নিশ্চিত করুন।</li>
+<li>পরিবহনে ছিদ্রযুক্ত পাত্র, ভেজা bedding, ছায়া।</li>
+<li>নতুন কেঁচো ৭–১৪ দিন quarantine-এ রাখুন।</li>
+<li>মৃত বা অসুস্থ কেঁচো আলাদা করুন।</li>
+<li>প্রথমে ছোট বেডে ছাড়ুন, তারপর বড় বেডে।</li>
+<li>Stock Record রাখুন (সংখ্যা, ওজন, প্রজাতি, তারিখ)।</li>
+</ul>
+</div></div>
+
+<!-- M21 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">২১</span> ফার্ম সাইট ও অবকাঠামো</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<ul>
+<li>ছায়াযুক্ত (গাছ/শেড)</li>
+<li>পানি সহজে পাওয়া যায়</li>
+<li>বর্ষায় পানি না জমা</li>
+<li>বায়ু চলাচল ভালো</li>
+<li>Feedstock সংরক্ষণ স্থান</li>
+<li>তৈরি পণ্য সংরক্ষণ</li>
+<li>পোকামাকড়/ইঁদুর নিয়ন্ত্রণ</li>
+<li>Wastewater ব্যবস্থাপনা</li>
+<li>কাজ ও packaging এলাকা আলাদা</li>
+</ul>
+<p>বাংলাদেশে শেডের ছাদ টিন/খড়, পাশে বাঁশ/জাল — বৃষ্টি ও রোদ থেকে সুরক্ষা দেয়।</p>
+</div></div>
+
+<!-- M22 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">২২</span> বেড ডিজাইন ও নির্মাণ</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<div class="table-wrap"><table><thead><tr><th>ধরন</th><th>উপকরণ</th><th>সুবিধা</th><th>সীমাবদ্ধতা</th></tr></thead><tbody>
+<tr><td>Ground Bed</td><td>মাটি/ইট</td><td>সস্তা</td><td>পোকা/ইঁদুর ঢোকে</td></tr>
+<tr><td>Raised Bed</td><td>বাঁশ/কাঠ</td><td>নিষ্কাশন ভালো</td><td>ক্ষয় হয়</td></tr>
+<tr><td>Brick Bed</td><td>ইট+সিমেন্ট</td><td>টেকসই</td><td>ব্যয়বহুল</td></tr>
+<tr><td>Cement Bed</td><td>কনক্রিট</td><td>দীর্ঘস্থায়ী</td><td>ভারী</td></tr>
+<tr><td>Plastic Bin</td><td>HDPE</td><td>বহনযোগ্য</td><td>ছোট স্কেল</td></tr>
+<tr><td>Windrow</td><td>মাটিতে সারি</td><td>বাণিজ্যিক</td><td>জায়গা বেশি</td></tr>
+</tbody></table></div>
+<p>সাধারণ মাপ: প্রস্থ ১–১.৫ মি, দৈর্ঘ্য ২–৩ মি, গভীরতা ৩০–৪৫ সেমি (সহজ ব্যবস্থাপনার জন্য)। চূড়ান্ত মাপ প্রজাতি, স্কেল ও bedding-নির্ভর।</p>
+<p><a href="calculators.html#bed" class="btn btn-primary">Bed Design Calculator →</a></p>
+</div></div>
+
+<!-- M23 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">২৩</span> Bedding Material প্রস্তুতি</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<div class="table-wrap"><table><thead><tr><th>উপকরণ</th><th>প্রস্তুতি</th><th>সতর্কতা</th></tr></thead><tbody>
+<tr><td>শুকনো পাতা</td><td>কুচি</td><td>কীটনাশক-মুক্ত</td></tr>
+<tr><td>Coconut Coir</td><td>পানি মিশিয়ে</td><td>লবণ পরীক্ষা</td></tr>
+<tr><td>ধানের খড়</td><td>কুচি</td><td>আগে পচিয়ে</td></tr>
+<tr><td>Banana Leaves</td><td>কুচি</td><td>রাসায়নিক-মুক্ত</td></tr>
+<tr><td>Cardboard</td><td>কুচি, ভিজিয়ে</td><td>কালি/টেপ বাদ</td></tr>
+<tr><td>Shredded Paper</td><td>ভিজিয়ে</td><td>রঙিন/গ্লসি নয়</td></tr>
+</tbody></table></div>
+<p>Bedding প্রায় ৩–৫ দিন আগে ভিজিয়ে রাখলে সহজে ভেঙে যায়, কেঁচোর জন্য আরামদায়ক।</p>
+</div></div>
+
+<!-- M24 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">২৪</span> Feedstock Database</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<div class="table-wrap"><table><thead><tr><th>Feedstock</th><th>উপযুক্ত?</th><th>প্রস্তুতি</th><th>সতর্কতা</th></tr></thead><tbody>
+<tr><td>গরুর গোবর (পচা)</td><td>✔</td><td>প্রি-কম্পোস্ট</td><td>তাজা নয়</td></tr>
+<tr><td>সবজি বর্জ্য</td><td>✔</td><td>কুচি, মিশ্রণ</td><td>লবণ/তেল বাদ</td></tr>
+<tr><td>ফলের বর্জ্য</td><td>✔ (সীমিত)</td><td>কুচি, প্রি-কম্পোস্ট</td><td>অ্যাসিডিক</td></tr>
+<tr><td>রান্নাঘরের বর্জ্য</td><td>△</td><td>প্রি-কম্পোস্ট</td><td>মাংস/তেল বাদ</td></tr>
+<tr><td>Mature Compost</td><td>✔</td><td>সরাসরি</td><td>—</td></tr>
+<tr><td>Biogas Digestate</td><td>শর্তসাপেক্ষ</td><td>পরীক্ষা+প্রস্তুতি</td><td>M25 দেখুন</td></tr>
+<tr><td>তাজা গরম গোবর</td><td>✘</td><td>প্রি-কম্পোস্ট</td><td>Ammonia burn</td></tr>
+<tr><td>প্লাস্টিক/কাচ/ধাতু</td><td>✘</td><td>—</td><td>—</td></tr>
+<tr><td>Saline/chemical waste</td><td>✘</td><td>—</td><td>বিষাক্ত</td></tr>
+</tbody></table></div>
+<p><small>⚠️ তালিকাটি সাধারণ নির্দেশনা; স্থানীয় পরিস্থিতি ও কেঁচোর প্রতিক্রিয়া দেখে সিদ্ধান্ত নিন।</small></p>
+</div></div>
+
+<!-- M25 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">২৫</span> গোবর প্রি-কম্পোস্টিং</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>তাজা গোবর সরাসরি কেন নয়?</h4>
+<p>তাজা গোবরে অ্যামোনিয়া ও তাপ বেশি থাকে; কেঁচোর ত্বক পুড়ে যেতে পারে। এছাড়া প্যাথোজেন থাকতে পারে।</p>
+<h4>ধাপ</h4>
+<ol>
+<li>গোবর ছায়ায় স্তূপ করুন (৩০–৪৫ সেমি গভীর)।</li>
+<li>ভেজা রাখুন কিন্তু ভিজা নয় (৫০–৬০% আর্দ্রতা)।</li>
+<li>প্রতি ৩–৫ দিনে উল্টান (aeration)।</li>
+<li>তাপমাত্রা প্রথমে ৫৫–৬৫°C, পরে কমে ঘরের তাপমাত্রায়।</li>
+<li>গন্ধ হ্রাস, রঙ গাঢ় বাদামি, স্থিতিশীল হলে ব্যবহারের যোগ্য।</li>
+<li>Worm Compatibility Test: ছোট নমুনায় ২৪–৪৮ ঘণ্টা কয়েকটি কেঁচো রেখে দেখুন — মরে/পালায় কিনা।</li>
+</ol>
+<p><small>⚠️ নির্দিষ্ট দিন নয় — তাপমাত্রা, গন্ধ, স্থিতিশীলতা ও পরীক্ষার ফলাফল দেখে সিদ্ধান্ত নিন।</small></p>
+</div></div>
+
+<!-- M26 - সবচেয়ে গুরুত্বপূর্ণ -->
+<div class="module open"><div class="module-header"><span><span class="mod-num">২৬</span> 🔑 বায়োগ্যাস ডাইজেস্টেট → ভার্মিকম্পোস্ট ইন্টিগ্রেশন</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<div class="alert alert-info"><b>Production Model:</b> গোবর → বায়োগ্যাস প্ল্যান্ট → বায়োগ্যাস → Digestate/Slurry → প্রস্তুতি ও পরীক্ষা → Vermicomposting → Vermicompost</div>
+
+<h4>Digestate ও Fresh Cow Dung-এর পার্থক্য</h4>
+<div class="table-wrap"><table><thead><tr><th>বৈশিষ্ট্য</th><th>Fresh Cow Dung</th><th>Digestate</th></tr></thead><tbody>
+<tr><td>Nitrogen form</td><td>জৈব N বেশি</td><td>Ammonium N বেশি</td></tr>
+<tr><td>গন্ধ</td><td>তীব্র</td><td>কম</td></tr>
+<tr><td>প্যাথোজেন</td><td>উচ্চ সম্ভাবনা</td><td>কিছুটা কমে</td></tr>
+<tr><td>pH</td><td>প্রায় নিরপেক্ষ</td><td>সামান্য ক্ষারীয়</td></tr>
+<tr><td>EC (লবণ)</td><td>মাঝারি</td><td>সাধারণত বেশি</td></tr>
+<tr><td>Organic matter</td><td>উচ্চ</td><td>কিছুটা ভেঙে গেছে</td></tr>
+</tbody></table></div>
+<p><small>⚠️ মান feedstock, digester condition ও HRT-নির্ভর; পরীক্ষা করে যাচাই করুন।</small></p>
+
+<h4>Digestion-এর পর কী পরিবর্তন হয়</h4>
+<p>জটিল জৈব পদার্থ ভেঙে সরল হয়; কিছু VS গ্যাসে রূপান্তরিত; অ্যামোনিয়াম-নাইট্রোজেন বাড়ে; প্যাথোজেন আংশিক কমে; কিন্তু residual heavy metal ও লবণ থাকতে পারে।</p>
+
+<h4>Digestate সরাসরি কেঁচোর বেডে দেওয়া যাবে না</h4>
+<p>উচ্চ অ্যামোনিয়া, লবণাক্ততা, pH ও অসম্পূর্ণ স্থিতিশীলতার কারণে কেঁচোর মৃত্যু হতে পারে।</p>
+
+<h4>১৬ ধাপের প্রস্তুতি</h4>
+<ol>
+<li>Digestate Collection</li>
+<li>Solid-Liquid Separation</li>
+<li>Solid Fraction Management</li>
+<li>Liquid Fraction Management</li>
+<li>Moisture Testing</li>
+<li>pH Testing</li>
+<li>EC Testing</li>
+<li>Temperature Testing</li>
+<li>Ammonia Risk Assessment</li>
+<li>Contamination Assessment (heavy metal, pesticide)</li>
+<li>Dry Carbon Material Addition (কুচি খড়/শুকনো পাতা)</li>
+<li>Aeration (উল্টানো)</li>
+<li>Stabilization (৭–২১ দিন, গন্ধ ও তাপমাত্রা দেখে)</li>
+<li>Small-scale Compatibility Test</li>
+<li>Worm Survival Observation (২৪–৭২ ঘণ্টা)</li>
+<li>Final Feedstock Approval</li>
+</ol>
+
+<h4>Experimental Bed Design</h4>
+<div class="table-wrap"><table><thead><tr><th>Bed</th><th>Feedstock</th></tr></thead><tbody>
+<tr><td>Control</td><td>প্রস্তুত সাধারণ গোবর</td></tr>
+<tr><td>Test A</td><td>প্রস্তুত Digestate</td></tr>
+<tr><td>Test B</td><td>Digestate + Dry Carbon</td></tr>
+<tr><td>Test C</td><td>অন্য পরীক্ষামূলক মিশ্রণ</td></tr>
+</tbody></table></div>
+
+<h4>রেকর্ড করতে হবে</h4>
+<ul>
+<li>Initial Worm Count & Weight</li>
+<li>Feedstock Type & Weight</li>
+<li>pH, EC, Temperature, Moisture</li>
+<li>Worm Survival</li>
+<li>Cocoon Count, Juvenile Count</li>
+<li>Growth, Odour, Vermicompost Output</li>
+</ul>
+
+<h4>Comparative Analysis</h4>
+<p>সব বেডের ডেটা weekly chart-এ তুলনা করুন। শুধু চোখে দেখে নিরাপদ বলা যাবে না — ডেটা প্রমাণ।</p>
+
+<div class="alert alert-danger">⚠️ কোনো Digestate "ভালো দেখাচ্ছে" বা "গন্ধ নেই" — এই ভিত্তিতে কেঁচোর জন্য নিরাপদ সিদ্ধান্ত নেওয়া যাবে না। সবসময় পরীক্ষা ও observation।</div>
+</div></div>
+
+<!-- M27 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">২৭</span> তিনটি বেড সিস্টেম</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>A. Breeding Bed (বংশবিস্তার বেড)</h4>
+<ul>
+<li>উদ্দেশ্য: Cocoon, Adult population, Breeder stock</li>
+<li>Bedding: আঁশযুক্ত, নরম</li>
+<li>Moisture: ৭০–৮০%</li>
+<li>Temperature: ২০–২৫°C আদর্শ</li>
+<li>Feeding: মাঝারি, বারবার নয়</li>
+<li>Monitoring: প্রতি সপ্তাহে cocoon count</li>
+</ul>
+<h4>B. Production Bed (উৎপাদন বেড)</h4>
+<ul>
+<li>উদ্দেশ্য: বাণিজ্যিক vermicompost</li>
+<li>প্রস্তুত feed ব্যবহার</li>
+<li>Feeding: বেশি, নিয়মিত</li>
+<li>Decomposition দ্রুত হওয়ার জন্য বড় বেড</li>
+<li>Harvesting regular</li>
+</ul>
+<h4>C. Nursery Bed (নার্সারি বেড)</h4>
+<ul>
+<li>উদ্দেশ্য: Cocoon hatch, juvenile care</li>
+<li>Cocoon আলাদা করে সংরক্ষণ</li>
+<li>নরম bedding, সূক্ষ্ম feed</li>
+<li>Mortality monitoring</li>
+<li>Juvenile transfer → Production Bed</li>
+</ul>
+</div></div>
+
+<!-- M28 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">২৮</span> বেডের পরিবেশ নিয়ন্ত্রণ</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<div class="table-wrap"><table><thead><tr><th>Parameter</th><th>সাধারণ পরিসর</th><th>বেশি হলে</th><th>কম হলে</th></tr></thead><tbody>
+<tr><td>Temperature</td><td>১৫–৩০°C (প্রজাতি-নির্ভর)</td><td>মৃত্যু, escape</td><td>ধীর বৃদ্ধি</td></tr>
+<tr><td>Moisture</td><td>৭০–৮০%</td><td>Anaerobic, গন্ধ</td><td>শুকিয়ে মৃত্যু</td></tr>
+<tr><td>pH</td><td>৬.৫–৭.৫</td><td>অ্যাসিডিক ক্ষতি</td><td>ক্ষারীয় সমস্যা</td></tr>
+<tr><td>Aeration</td><td>ভালো</td><td>—</td><td>Anaerobic, মৃত্যু</td></tr>
+<tr><td>Bed Depth</td><td>৩০–৪৫ সেমি</td><td>ভেতরে চাপা তাপ</td><td>শুকিয়ে যায়</td></tr>
+<tr><td>Feed Depth</td><td>৫–১০ সেমি</td><td>গরম, অ্যামোনিয়া</td><td>খাদ্য কম</td></tr>
+</tbody></table></div>
+<p>বাংলাদেশে গ্রীষ্মে শেড + ভেজা বস্তা, শীতে পলিথিন ঢাকনা, বর্ষায় ছাদ — এই ব্যবস্থাগুলো জরুরি।</p>
+<p><small>⚠️ পরিসরগুলো প্রজাতি ও অবস্থা-নির্ভর; নিজের কেঁচোর আচরণ দেখে সমন্বয় করুন।</small></p>
+</div></div>
+
+<!-- M29 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">২৯</span> Feeding Management</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<ul>
+<li>Feed Frequency: সপ্তাহে ১–২ বার (temp-নির্ভর)</li>
+<li>Feed Quantity: কেঁচোর ওজনের প্রায় ৫০% (trial basis)</li>
+<li>Feed Location: এক পাশে, অন্য পাশে কেঁচো নিরাপদ</li>
+<li>Layering: bedding → feed → cover</li>
+<li>Surface ও Pocket feeding</li>
+<li>Overfeeding এর লক্ষণ: গন্ধ, মাছি, তাপ বৃদ্ধি</li>
+<li>Underfeeding: কেঁচো পালিয়ে যায়</li>
+</ul>
+<p><a href="calculators.html#feed" class="btn btn-primary">Feeding Calculator →</a></p>
+</div></div>
+
+<!-- M30 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">৩০</span> কেঁচো জনসংখ্যা ব্যবস্থাপনা</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<ul>
+<li>Population estimate (grid sampling)</li>
+<li>Biomass measurement</li>
+<li>Adult vs juvenile count</li>
+<li>Cocoon count (প্রতি সপ্তাহে)</li>
+<li>Growth rate computation</li>
+<li>Mortality rate computation</li>
+<li>Stock transfer (breeding → production)</li>
+<li>Selling stock</li>
+<li>Breeder stock reserve</li>
+</ul>
+<p><a href="calculators.html#worm" class="btn btn-primary">Worm Population Calculator →</a></p>
+</div></div>
+
+<!-- M31 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">৩১</span> ঋতুভিত্তিক ব্যবস্থাপনা (বাংলাদেশ)</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<h4>গ্রীষ্ম</h4>
+<ul><li>ছায়া বাড়ান</li><li>ভেজা বস্তা দিয়ে বেড ঠান্ডা</li><li>Feeding সময় সকাল/সন্ধ্যা</li><li>পানি ছিটান</li></ul>
+<h4>বর্ষা</h4>
+<ul><li>বেড ঢাকনা</li><li>নিষ্কাশন</li><li>Leachate ব্যবস্থাপনা</li><li>ছত্রাক প্রতিরোধ</li></ul>
+<h4>শীত</h4>
+<ul><li>পলিথিন ঢাকনা</li><li>Feeding কম</li><li>Bedding গভীর</li><li>সকালে feeding</li></ul>
+<h4>সারা বছর</h4>
+<ul><li>Pest management</li><li>Humidity</li><li>Ventilation</li><li>Flood/cyclone প্রস্তুতি</li></ul>
+</div></div>
+
+<!-- M32 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">৩২</span> Harvesting</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<div class="table-wrap"><table><thead><tr><th>পদ্ধতি</th><th>সুবিধা</th><th>অসুবিধা</th></tr></thead><tbody>
+<tr><td>Light Separation</td><td>সহজ</td><td>শুধু ছোট বেডে</td></tr>
+<tr><td>Hand Separation</td><td>নির্ভুল</td><td>সময়সাপেক্ষ</td></tr>
+<tr><td>Horizontal Migration</td><td>কেঁচো রক্ষা</td><td>ধীর</td></tr>
+<tr><td>Vertical Migration</td><td>বড় বেডে ভালো</td><td>পরিকল্পনা দরকার</td></tr>
+<tr><td>Screening</td><td>দ্রুত</td><td>কিছু কেঁচো আহত</td></tr>
+</tbody></table></div>
+<p>Harvest করার সময় cocoon ও juvenile আলাদা করুন — পরবর্তী ব্যাচের জন্য।</p>
+</div></div>
+
+<!-- M33 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">৩৩</span> কোয়ালিটি টেস্টিং</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<div class="table-wrap"><table><thead><tr><th>Test</th><th>ফার্মে?</th><th>গুরুত্ব</th></tr></thead><tbody>
+<tr><td>Moisture</td><td>✔</td><td>সংরক্ষণ</td></tr>
+<tr><td>pH</td><td>✔</td><td>উদ্ভিদ উপযোগিতা</td></tr>
+<tr><td>EC</td><td>✔ (meter)</td><td>লবণাক্ততা</td></tr>
+<tr><td>Organic Carbon</td><td>✘ ল্যাব</td><td>জৈব গুণ</td></tr>
+<tr><td>Total N</td><td>✘ ল্যাব</td><td>পুষ্টি</td></tr>
+<tr><td>P, K</td><td>✘ ল্যাব</td><td>পুষ্টি</td></tr>
+<tr><td>C:N</td><td>✘ ল্যাব</td><td>Maturity</td></tr>
+<tr><td>Pathogens</td><td>✘ ল্যাব</td><td>নিরাপত্তা</td></tr>
+<tr><td>Heavy Metals</td><td>✘ ল্যাব</td><td>নিরাপত্তা</td></tr>
+</tbody></table></div>
+<p><small>⚠️ শুধু রং/গন্ধ/গঠন দেখে NPK নির্ধারণ করা যায় না। ল্যাব রিপোর্টই প্রমাণ।</small></p>
+</div></div>
+
+<!-- M34 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">৩৪</span> ড্রাইং, স্ক্রিনিং, প্যাকেজিং, স্টোরেজ</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<ul>
+<li>Harvested compost ছায়ায় শুকান → ৩০–৪০% আর্দ্রতায় আনুন</li>
+<li>৫–১০ মিমি ছাঁকনি দিয়ে screen</li>
+<li>HDPE ব্যাগে প্যাক করুন</li>
+<li>Label: Batch, Production date, Weight, Instructions</li>
+<li>ঠান্ডা, শুষ্ক স্থানে সংরক্ষণ</li>
+<li>সরাসরি রোদ ও আর্দ্রতা এড়ান</li>
+</ul>
+<p><b>Batch System:</b> প্রতিটি ব্যাচের জন্য Batch ID, 날짜, ইনপুট ও পরীক্ষার ডেটা সংরক্ষণ করুন।</p>
+</div></div>
+
+<!-- M35 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">৩৫</span> প্রোডাক্ট ডেভেলপমেন্ট</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<div class="table-wrap"><table><thead><tr><th>পণ্য</th><th>Raw Material</th><th>Target</th></tr></thead><tbody>
+<tr><td>Standard Vermicompost</td><td>Screened castings</td><td>কৃষক</td></tr>
+<tr><td>Screened Premium</td><td>Fine screened</td><td>Nursery</td></tr>
+<tr><td>Potting Mix</td><td>Vermicompost + coir + soil</td><td>রুফটপ গার্ডেনার</td></tr>
+<tr><td>Soil Conditioner</td><td>Coarse vermicompost</td><td>কমার্শিয়াল ফার্ম</td></tr>
+<tr><td>Worm Biomass</td><td>Live worms</td><td>Breeder</td></tr>
+<tr><td>Breeding Stock</td><td>Selected cocoons+adults</td><td>নতুন উদ্যোক্তা</td></tr>
+</tbody></table></div>
+<p><b>Vermiwash:</b> কেঁচোর bed থেকে নিঃসৃত তরল — প্রস্তুতি, dilution, পরীক্ষা ও মান নিয়ন্ত্রণ ছাড়া সরাসরি নিরাপদ সার হিসেবে দাবি করবেন না।</p>
+</div></div>
+
+<!-- M36 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">৩৬</span> ফসলভিত্তিক প্রয়োগ নির্দেশিকা</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<div class="table-wrap"><table><thead><tr><th>ফসল</th><th>পদ্ধতি</th><th>সতর্কতা</th></tr></thead><tbody>
+<tr><td>সবজি</td><td>মাটিতে মিশ্রণ (basal) + top dress</td><td>মাটির পরীক্ষা</td></tr>
+<tr><td>ফল</td><td>গাছের গোড়ার চারপাশে</td><td>সরাসরি শিকড়ে নয়</td></tr>
+<tr><td>ফুল</td><td>Potting mix-এ</td><td>সঠিক অনুপাত</td></tr>
+<tr><td>Nursery</td><td>Fine screened mix</td><td>Dilute</td></tr>
+<tr><td>Rooftop</td><td>মাটির সাথে মিশ্রণ</td><td>Drainage নিশ্চিত</td></tr>
+<tr><td>ধান/গম</td><td>জমিতে ছিটিয়ে</td><td>স্থানীয় সুপারিশ</td></tr>
+<tr><td>Seedling</td><td>হালকা mix</td><td>অতিরিক্ত নয়</td></tr>
+</tbody></table></div>
+<div class="alert alert-warn">⚠️ সঠিক মাত্রা মাটি পরীক্ষা, ফসল ও স্থানীয় কৃষি নির্দেশিকা অনুযায়ী নির্ধারণ করুন। যাচাইহীন নির্দিষ্ট সংখ্যা দেওয়া হচ্ছে না।</div>
+</div></div>
+
+<!-- M37 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">৩৭</span> ট্রাবলশুটিং</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<div class="table-wrap"><table><thead><tr><th>সমস্যা</th><th>কারণ</th><th>সমাধান</th></tr></thead><tbody>
+<tr><td>Worms Escaping</td><td>অতিরিক্ত আর্দ্রতা/তাপ/অ্যামোনিয়া</td><td>Moisture কম, ছায়া, প্রি-কম্পোস্ট নিশ্চিত</td></tr>
+<tr><td>Worm Mortality</td><td>বিষাক্ততা, তাপ, pH</td><td>Feed পরীক্ষা, 환경 সংশোধন</td></tr>
+<tr><td>Worms Not Eating</td><td>অতিরিক্ত feed, অপ্রস্তুত feed</td><td>Feed সরান, নতুন দিন</td></tr>
+<tr><td>Bad Odour</td><td>Anaerobic অবস্থা</td><td>উল্টান, শুকনো bedding</td></tr>
+<tr><td>Excess Moisture</td><td>অতিরিক্ত পানি</td><td>শুকনো bedding মেশান</td></tr>
+<tr><td>Dry Bed</td><td>পানি কম</td><td>ছিটিয়ে পানি</td></tr>
+<tr><td>Ant Attack</td><td>শুকনো বা মিষ্টি খাবার</td><td>Bed গভীর, পানি ছিটান</td></tr>
+<tr><td>Fly Infestation</td><td>পচা খাদ্য</td><td>Feed ঢেকে দিন, প্রি-কম্পোস্ট</td></tr>
+<tr><td>Mold</td><td>অতিরিক্ত আর্দ্রতা</td><td>Ventilation, কম পানি</td></tr>
+<tr><td>Acidic Bed</td><td>অতিরিক্ত ফল/সবজি</td><td>চুন অল্প পরিমাণ (pH টেস্ট)</td></tr>
+<tr><td>High Salinity</td><td>Feed saline</td><td>Feed পরিবর্তন</td></tr>
+<tr><td>Ammonia Toxicity</td><td>তাজা গোবর</td><td>প্রি-কম্পোস্ট</td></tr>
+<tr><td>Low Reproduction</td><td>তাপমাত্রা/খাদ্য</td><td>সমন্বয়</td></tr>
+<tr><td>Cocoon Hatching Failure</td><td>আর্দ্রতা/তাপ</td><td>সমন্বয়</td></tr>
+</tbody></table></div>
+</div></div>
+
+<!-- M38 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">৩৮</span> ফার্ম হাইজিন ও বায়োসিকিউরিটি</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<ul>
+<li>Bedding ও যন্ত্রপাতি পরিষ্কার রাখুন</li>
+<li>রোগ/পোকা দেখা দিলে আক্রান্ত বেড আলাদা করুন</li>
+<li>জীবাণুনাশক ব্যবহারে সতর্কতা — কেঁচোর জন্য ক্ষতিকর</li>
+<li>ইঁদুর ও পোকামাকড় প্রতিরোধ</li>
+<li>পানির গুণমান পরীক্ষা</li>
+<li>Worker hygiene: গ্লাভস, হাত ধোয়া</li>
+<li>Equipment আলাদা রাখুন — বায়োগ্যাসের জন্য এক, ভার্মির জন্য এক</li>
+<li>নতুন কেঁচোর জন্য quarantine</li>
+</ul>
+<div class="alert alert-warn">⚠️ কীটনাশক/রাসায়নিক স্প্রে করলে বাতাসে ভেসে কেঁচোর বেডে যেতে পারে — ব্যবহারে অত্যন্ত সতর্কতা।</div>
+</div></div>
+
+<!-- M39 -->
+<div class="module"><div class="module-header"><span><span class="mod-num">৩৯</span> ফার্ম বিস্তার পরিকল্পনা</span><span class="arrow">▼</span></div>
+<div class="module-body">
+<div class="table-wrap"><table><thead><tr><th>স্কেল</th><th>বেড</th><th>জায়গা</th><th>শ্রম</th></tr></thead><tbody>
+<tr><td>Home</td><td>১–২</td><td>২×৩ মি</td><td>পারিবারিক</td></tr>
+<tr><td>Small</td><td>৫</td><td>১০–১৫ m²</td><td>১ জন</td></tr>
+<tr><td>Medium</td><td>২০</td><td>৫০–৭০ m²</td><td>২–৩ জন</td></tr>
+<tr><td>Commercial</td><td>৫০+</td><td>১৫০+ m²</td><td>৪+ জন</td></tr>
+</tbody></table></div>
+<p>প্রতিটি পর্যায়ে feedstock requirement, worm stock, storage, packaging ও বিক্রয় চাহিদা হিসাব করতে হবে। <a href="calculators.html">ক্যালকুলেটর ব্যবহার করুন।</a></p>
+<p><small>⚠️ সব হিসাব ব্যবহারকারী ইনপুট-নির্ভর; কোনো লাভের প্রতিশ্রুতি নয়।</small></p>
+</div></div>
+
+<div class="footer">© BioVermi Bangladesh — ভার্মিকম্পোস্ট মডিউল</div>
+</div></div></div>
+<script src="script.js"></script>
+</body></html>
