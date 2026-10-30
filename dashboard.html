@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ড্যাশবোর্ড — BioVermi Bangladesh</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<div class="overlay" id="overlay"></div>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><span class="brand-icon">🌱</span><span class="brand-text">BioVermi<small>Bangladesh</small></span></div>
+  <nav>
+    <div class="nav-section"><div class="nav-section-title">প্রধান</div>
+      <a href="index.html"><span class="nav-icon">🏠</span> হোম</a>
+      <a href="dashboard.html" class="active"><span class="nav-icon">📊</span> ড্যাশবোর্ড</a>
+      <a href="calculators.html"><span class="nav-icon">🧮</span> ক্যালকুলেটর</a></div>
+    <div class="nav-section"><div class="nav-section-title">শিক্ষা</div>
+      <a href="biogas.html"><span class="nav-icon">🔥</span> বায়োগ্যাস</a>
+      <a href="vermicompost.html"><span class="nav-icon">🪱</span> ভার্মিকম্পোস্ট</a>
+      <a href="integrated-farm.html"><span class="nav-icon">♻️</span> ইন্টিগ্রেটেড ফার্ম</a></div>
+    <div class="nav-section"><div class="nav-section-title">ব্যবসা</div>
+      <a href="business.html"><span class="nav-icon">💼</span> বিজনেস ও মার্কেটিং</a></div>
+    <div class="nav-section"><div class="nav-section-title">রেফারেন্স</div>
+      <a href="glossary.html"><span class="nav-icon">📖</span> গ্লসারি</a>
+      <a href="references.html"><span class="nav-icon">🔗</span> রেফারেন্স</a>
+      <a href="learning.html"><span class="nav-icon">🎓</span> রোডম্যাপ</a></div>
+  </nav>
+</aside>
+<div class="main">
+<div class="topbar">
+  <button class="hamburger" id="hamburger">☰</button>
+  <div class="search-box"><input type="text" id="siteSearch" placeholder="সার্চ..."></div>
+  <div class="topbar-actions">
+    <button class="icon-btn" id="exportBtn" title="Backup">💾</button>
+    <button class="icon-btn" id="themeToggle">🌓</button>
+  </div>
+</div>
+<div class="content">
+<div class="page-header"><h1>📊 ফার্ম ড্যাশবোর্ড</h1><p>সব ডেটা LocalStorage-এ সংরক্ষিত। ডেমো ও আসল ডেটা আলাদা লেবেলযুক্ত।</p></div>
+
+<h2>মূল সূচক</h2>
+<div class="grid grid-4" style="margin-bottom:24px">
+  <div class="card stat-card"><div class="stat-label">মোট বায়োগ্যাস <span class="badge badge-demo">Demo</span></div><div class="stat-value" id="dTotalGas">০</div><div class="stat-unit">m³</div></div>
+  <div class="card stat-card"><div class="stat-label">দৈনিক গ্যাস</div><div class="stat-value" id="dDailyGas">০</div><div class="stat-unit">m³/day</div></div>
+  <div class="card stat-card"><div class="stat-label">মোট গোবর ইনপুট</div><div class="stat-value" id="dDung">০</div><div class="stat-unit">kg</div></div>
+  <div class="card stat-card"><div class="stat-label">ডাইজেস্টেট আউটপুট</div><div class="stat-value" id="dDigestate">০</div><div class="stat-unit">kg</div></div>
+  <div class="card stat-card"><div class="stat-label">সক্রিয় বেড</div><div class="stat-value" id="dBeds">০</div><div class="stat-unit">বেড</div></div>
+  <div class="card stat-card"><div class="stat-label">মোট কেঁচো</div><div class="stat-value" id="dWorms">০</div><div class="stat-unit">টি</div></div>
+  <div class="card stat-card"><div class="stat-label">দৈনিক ফিড</div><div class="stat-value" id="dFeed">০</div><div class="stat-unit">kg</div></div>
+  <div class="card stat-card"><div class="stat-label">আনুমানিক ভার্মিকম্পোস্ট</div><div class="stat-value" id="dVermi">০</div><div class="stat-unit">kg</div></div>
+  <div class="card stat-card"><div class="stat-label">মোট স্টক</div><div class="stat-value" id="dStock">০</div><div class="stat-unit">kg</div></div>
+  <div class="card stat-card"><div class="stat-label">মাসিক আয়</div><div class="stat-value" id="dRev">৳ ০</div></div>
+  <div class="card stat-card"><div class="stat-label">মাসিক ব্যয়</div><div class="stat-value" id="dExp">৳ ০</div></div>
+  <div class="card stat-card"><div class="stat-label">আনুমানিক লাভ</div><div class="stat-value" id="dProfit">৳ ০</div></div>
+  <div class="card stat-card"><div class="stat-label">অপেক্ষমাণ কাজ</div><div class="stat-value" id="dTasks">০</div></div>
+  <div class="card stat-card"><div class="stat-label">মেইনটেনেন্স অ্যালার্ট</div><div class="stat-value" id="dAlerts">০</div></div>
+</div>
+
+<h2>প্রোডাকশন চার্ট (Demo)</h2>
+<div class="chart-wrap" style="margin-bottom:24px"><canvas id="prodChart" height="90"></canvas></div>
+
+<h2 id="tasks">✅ দৈনিক টাস্ক</h2>
+<div class="card" style="margin-bottom:24px">
+  <form id="taskForm" style="display:flex;gap:10px;margin-bottom:16px">
+    <input type="text" id="taskInput" placeholder="নতুন কাজ লিখুন..." style="flex:1">
+    <button class="btn btn-primary" type="submit">যোগ করুন</button>
+  </form>
+  <div class="progress"><div class="progress-bar" id="taskProgress" style="width:0%"></div></div>
+  <small>সম্পন্ন: <b id="taskPct">0%</b></small>
+  <div id="taskList" style="margin-top:12px"></div>
+</div>
+
+<h2 id="logs">📝 দৈনিক লগ এন্ট্রি</h2>
+<div class="card" style="margin-bottom:24px">
+  <form id="logForm">
+    <div class="form-row">
+      <div class="form-group"><label>তারিখ</label><input type="date" id="logDate" required></div>
+      <div class="form-group"><label>ধরন</label>
+        <select id="logType">
+          <option>বায়োগ্যাস</option><option>ভার্মিকম্পোস্ট</option><option>ইন্টিগ্রেটেড</option>
+        </select></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>বিবরণ</label><input type="text" id="logItem" placeholder="যেমন: গোবর ফিডিং" required></div>
+      <div class="form-group"><label>পরিমাণ</label><input type="number" id="logQty" step="any"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>একক</label>
+        <select id="logUnit"><option>kg</option><option>L</option><option>m³</option><option>pcs</option><option>টি</option></select></div>
+      <div class="form-group"><label>নোট</label><input type="text" id="logNote"></div>
+    </div>
+    <button class="btn btn-primary" type="submit">লগ সংরক্ষণ</button>
+  </form>
+</div>
+<div id="logList"></div>
+
+<h2 style="margin-top:32px">📦 ইনভেন্টরি</h2>
+<div id="invList"></div>
+
+<h2 style="margin-top:32px">💾 ব্যাকআপ</h2>
+<div class="card">
+  <p>আপনার সব ডেটা LocalStorage-এ সংরক্ষিত। নিয়মিত ব্যাকআপ নিন।</p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap">
+    <button class="btn btn-outline" id="exportBtn2" onclick="BV.bindExportImport();document.getElementById('exportBtn').click()">📤 Export JSON</button>
+    <input type="file" id="importFile" accept=".json" style="display:none" onchange="document.getElementById('importBtn').click()">
+    <button class="btn btn-outline" onclick="document.getElementById('importFile').click()">📥 Import JSON</button>
+    <button class="btn btn-outline" id="importBtn" style="display:none">Confirm</button>
+    <button class="btn btn-danger" onclick="if(confirm('সব ডেটা মুছে যাবে?')){localStorage.clear();location.reload()}">🗑️ Reset All</button>
+  </div>
+</div>
+
+<div class="footer">© BioVermi Bangladesh</div>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const ctx=document.getElementById('prodChart');
+  if(ctx) new Chart(ctx,{type:'line',data:{
+    labels:['সপ্তাহ ১','সপ্তাহ ২','সপ্তাহ ৩','সপ্তাহ ৪'],
+    datasets:[
+      {label:'বায়োগ্যাস (m³)',data:[12,18,22,26],borderColor:'#2d6a4f',backgroundColor:'rgba(45,106,79,.15)',tension:.35,fill:true},
+      {label:'ভার্মিকম্পোস্ট (kg)',data:[5,10,18,25],borderColor:'#8b6f47',backgroundColor:'rgba(139,111,71,.15)',tension:.35,fill:true}
+    ]},options:{responsive:true,plugins:{legend:{position:'bottom'}}}});
+});
+</script>
+</body>
+</html>
